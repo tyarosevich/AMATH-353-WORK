@@ -1,0 +1,89 @@
+\documentclass{article}
+
+\usepackage{siunitx} % Provides the \SI{}{} and \si{} command for typesetting SI units
+\usepackage{graphicx} % Required for the inclusion of images
+\usepackage{amsmath} % Required for some math elements 
+\usepackage[export]{adjustbox} % loads also graphicx
+\usepackage{listings}
+\usepackage{matlab-prettifier}
+\usepackage{float}
+
+\usepackage{titlesec}
+\usepackage{caption}
+\usepackage{subcaption}
+
+
+\usepackage{xcolor}
+
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{%
+  \parbox{\textwidth}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}\vskip-4pt}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\lstset{frame=lrb,xleftmargin=\fboxsep,xrightmargin=-\fboxsep}
+\titleformat{\section}[runin]
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}[runin]
+  {\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+
+%\usepackage{times} % Uncomment to use the Times New Roman font
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{AMATH 353: Homework 2 \\Due April, 6 2018 \\ ID: 1064712} % Title
+
+\author{Trent \textsc{Yarosevich}} % Author name
+
+\date{\today} % Date for the report
+
+\begin{document}
+\maketitle % Insert the title, author and date
+\setlength\parindent{1cm}
+
+\begin{center}
+\begin{tabular}{l r}
+%Date Performed: December 1, 2017 \\ % Date the experiment was performed
+Instructor: Jeremy Uscal % Instructor/supervisor
+\end{tabular}
+\end{center}
+
+% If you wish to include an abstract, uncomment the lines below
+% \begin{abstract}
+% Abstract text
+% \end{abstract}
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+\section*{} 
+	In order to change the range of $t$ to some $\tau > 0$, I used the following function: 
+\begin{equation}
+\tau(t) = t - T
+\end{equation}
+
+\noindent By plugging this new variable into $u$ and using the chain rule we get: 
+\begin{equation}
+\begin{aligned}
+\hat{u}_{tt} = \frac{d}{dt}(\frac{du}{dt})\\
+\hat{u}_{tt} = \frac{d}{dt}(\frac{du}{d\tau}\frac{d\tau}{dt})
+\end{aligned}
+\end{equation}
+Because $\frac{d\tau}{dt} = 1$ we then get:
+\begin{equation}
+\hat{u}_{tt} = \frac{d}{dt}(\frac{du}{d\tau})
+\end{equation}
+We then do the same procedure again:
+\begin{equation}
+\begin{aligned}
+\hat{u}_{tt} = \frac{d^2u}{d\tau}\frac{d\tau}{dt}\\
+\hat{u}_{tt} = \frac{d^2u}{d\tau} = u_{\tau\tau}
+\end{aligned}
+\end{equation}
+The fact that there is no change in the PDE is to be expected since we are merely re-locating the function to the left, with no alterations to its rate of change. The values for the boundary conditions are adjusted accordingly to $\hat{u}(a, h_1(\tau)) = u(a, t - T)$ and $\hat{u}(b, h_2(\tau)) = u(b, t - T)$.
+\end{document}
