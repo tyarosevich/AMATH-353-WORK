@@ -1,0 +1,112 @@
+\documentclass{article}
+
+\usepackage{siunitx} % Provides the \SI{}{} and \si{} command for typesetting SI units
+\usepackage{graphicx} % Required for the inclusion of images
+\usepackage{amsmath} % Required for some math elements 
+\usepackage[export]{adjustbox} % loads also graphicx
+\usepackage{listings}
+\usepackage{matlab-prettifier}
+\usepackage{float}
+
+\usepackage{titlesec}
+\usepackage{caption}
+\usepackage{subcaption}
+
+
+\usepackage{xcolor}
+
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{%
+  \parbox{\textwidth}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}\vskip-4pt}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\lstset{frame=lrb,xleftmargin=\fboxsep,xrightmargin=-\fboxsep}
+\titleformat{\section}[runin]
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}[runin]
+  {\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+
+%\usepackage{times} % Uncomment to use the Times New Roman font
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{AMATH 353: Homework 3 \\Due April, 11 2018 \\ ID: 1064712} % Title
+
+\author{Trent \textsc{Yarosevich}} % Author name
+
+\date{\today} % Date for the report
+
+\begin{document}
+\maketitle % Insert the title, author and date
+\setlength\parindent{1cm}
+
+\begin{center}
+\begin{tabular}{l r}
+%Date Performed: December 1, 2017 \\ % Date the experiment was performed
+Instructor: Jeremy Upsal % Instructor/supervisor
+\end{tabular}
+\end{center}
+
+% If you wish to include an abstract, uncomment the lines below
+% \begin{abstract}
+% Abstract text
+% \end{abstract}
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+\section*{Part 1.)} 
+\subsection*{a.)}
+By $u(x, t)=f(x-ct)$ and $z=x-ct$ the PDE (Klein-Gordon) \\ $u_{tt} = au_{xx} - bu$ becomes:
+\begin{equation}
+c^2f''(z) = af''(z)+bf(z)
+\end{equation}     
+\subsection*{b.)}
+Rewriting the ODE as $(c^2 - a)f''(z) + bf(z) = 0$ we arrive at a trivial solution when $c^2 = a$, or when $c = \pm\sqrt{a}$. This value of c results in the second order derivative being zero, yielding the trivial solution $bf(z) = 0$ or $f(z) = 0$.\\
+\\
+Accordingly, we get non-trivial solutions both when $c^2 > a$ and when $c^2 < a$.
+\subsection*{c.)}
+If we let $A^2 = \frac{b}{c^2 -a}$ we then have the equation
+\begin{equation}
+f''(z) + A^2f(z) = 0
+\end{equation}
+which we then solve using the characteristic polynomial for both cases of non-trivial solutions. When $c^2 > a$ it follows that $A^2$ will be positive, resulting in:
+\begin{equation}
+r^2 + A^2 = 0
+\end{equation}
+and by quadratic formula we find the roots
+\begin{equation}
+r = \pm Ai
+\end{equation}
+which gives us a solution 
+\begin{equation}
+f(z) = C_1cos(Ax) + C_2sin(Ax)
+\end{equation}
+This then results in an oscillatory solution for values of $c > a^2$
+\begin{equation}
+u(x, t) = C_1cos(\sqrt{\frac{b}{c^2 - a}}(x - ct)) + C_2sin(\sqrt{\frac{b}{c^2 - a}}(x - ct))
+\end{equation}
+\subsection*{d.)}
+For values of $c<a^2$ we take the same approach, but $A^2$ is now negative, resulting in the following with the characteristic polynomial:
+\begin{equation}
+\begin{aligned}
+r^2 - A^2 = 0\\
+(r - A)(r + A) = 0\\
+r = \pm A
+\end{aligned}
+\end{equation}
+resulting in a solution of
+\begin{equation}
+f(z) = C_1e^{Az} + C_2e^{-Az}
+\end{equation}
+If we then let $C_1 = 0$ we arrive at a solution that decays as $x$ goes to $\infty$. Substituting back in for $z$:
+\begin{equation}
+u(x,t) = C_2e^{\sqrt{\frac{b}{c^2 - a}}(x-ct)}
+\end{equation}
+\end{document}
