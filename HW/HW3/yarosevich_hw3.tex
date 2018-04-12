@@ -107,7 +107,7 @@ f(z) = C_1e^{Az} + C_2e^{-Az}
 \end{equation}
 If we then let $C_1 = 0$ we arrive at a solution that decays as $x \to \infty$ for values of $c^2 < a$. Substituting back in for $z$:
 \begin{equation}
-u(x,t) = C_2e^{\sqrt{\frac{b}{c^2 - a}}(x-ct)}
+u(x,t) = C_2e^{-\sqrt{\frac{b}{c^2 - a}}(x-ct)}
 \end{equation}
 \section*{Part 2.)}
 Letting $u(x, t) = f(x - ct)$ and $z = x-ct$ we arrive at the ODE
@@ -178,7 +178,7 @@ After cancelling of terms we arrive at:
 \begin{equation}
 \begin{aligned}
 wv_x + vw_x = 0\\
-\frac{d}{x}(wv) = 0
+\frac{d}{dx}(wv) = 0
 \end{aligned}
 \end{equation}
 Integration would show that in order for this solution to satisfy the PDE, $wv$ cannot be dependent upon $x$, and could only have constants and $t$ terms. Thus this solution models an interesting situation in which there is no spatial interaction between the two wave solutions.
