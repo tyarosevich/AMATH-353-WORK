@@ -88,12 +88,12 @@ which gives us a solution
 \begin{equation}
 f(z) = C_1cos(Ax) + C_2sin(Ax)
 \end{equation}
-This then results in an oscillatory solution for values of $c > a^2$
+This then results in an oscillatory solution for values of $c^2 > a$
 \begin{equation}
 u(x, t) = C_1cos(\sqrt{\frac{b}{c^2 - a}}(x - ct)) + C_2sin(\sqrt{\frac{b}{c^2 - a}}(x - ct))
 \end{equation}
 \subsection*{d.)}
-For values of $c<a^2$ we take the same approach, but $A^2$ is now negative, resulting in the following with the characteristic polynomial:
+For values of $c^2<a$ we take the same approach, but $A^2$ is now negative, resulting in the following with the characteristic polynomial:
 \begin{equation}
 \begin{aligned}
 r^2 - A^2 = 0\\
@@ -105,8 +105,81 @@ resulting in a solution of
 \begin{equation}
 f(z) = C_1e^{Az} + C_2e^{-Az}
 \end{equation}
-If we then let $C_1 = 0$ we arrive at a solution that decays as $x$ goes to $\infty$. Substituting back in for $z$:
+If we then let $C_1 = 0$ we arrive at a solution that decays as $x \to \infty$ for values of $c^2 < a$. Substituting back in for $z$:
 \begin{equation}
 u(x,t) = C_2e^{\sqrt{\frac{b}{c^2 - a}}(x-ct)}
 \end{equation}
+\section*{Part 2.)}
+Letting $u(x, t) = f(x - ct)$ and $z = x-ct$ we arrive at the ODE
+\begin{equation}
+c^2f''(z) - f''(z) + sin(f(z)) = 0
+\end{equation}
+Using the shorthand $f$ in place of $f(z)$, we multiply by $f'$ and arrive at 
+\begin{equation}
+(c^2 -1)f''f' + sin(f)f' = 0
+\end{equation}
+and then integrate to get
+\begin{equation}
+\frac{1}{2}(c^2 - 1)(f')^2 - cos(f) = a
+\end{equation}
+Because we are treating $f(z) \to \pi$ and $f'(z) \to 0$ as $z \to \infty$ we can find the constant of integration a:
+\begin{equation}
+\begin{aligned}
+\frac{1}{2}(c^2 - 1)(0)^2 - cos(\pi) = a\\
+a = 1
+\end{aligned}
+\end{equation}
+We then have
+\begin{equation}
+\frac{1}{2}(c^2 -1)(f')^2 = 1+ cos(f) 
+\end{equation}
+then by half-angle formula
+\begin{equation}
+\frac{1}{4}(c^2 -1)(f')^2 = cos^2(f/2) 
+\end{equation}
+With some manipulation this becomes
+\begin{equation}
+\begin{aligned}
+\frac{df}{cos(\frac{f}{2})} = \frac{2}{\sqrt{c^2-1}}dz\\
+sec(\frac{f}{2}) = \frac{2}{\sqrt{c^2-1}}dz
+\end{aligned}
+\end{equation}
+\noindent
+Integration using the method of multiplying $sec$ by $\frac{sec}{tan}$ yields
+\begin{equation}
+\begin{aligned}
+2ln(sec(\frac{f}{2}) + tan(\frac{f}{2})) = \frac{2}{\sqrt{c^2-1}} z + E\\
+sec(\frac{f}{2}) + tan(\frac{f}{2}) = e^{\frac{1}{\sqrt{c^2-1}}} z + E
+\end{aligned}
+\end{equation}
+By an obscure trig identity we get
+\begin{equation}
+1 + \frac{2}{cot(\frac{f}{4}) -1} = e^{\frac{1}{\sqrt{c^2-1}}z}
+\end{equation}
+By rearrangement and taking the inverse of both sides, we get a function of tangent. By then taking the arctan, and assuming the constant of integration is 0, we arrive at the following equation, which was verified to solve the PDE using Wolfram:
+\begin{equation}
+f = 4arctan(\frac{1}{\frac{2}{e^{\frac{z}{\sqrt{c^2-1}}+1}}})
+\end{equation}
+Finally, substituting back in for $z$ and returning the constant of integration $E$ we get:
+\begin{equation}
+f = 4arctan(\frac{1}{\frac{2}{e^{\frac{x-ct + E}{\sqrt{c^2-1}}+1}}})
+\end{equation}
+I'm not certain, but I believe the physical interpretation of this, in the pendulum schema, is that after the wavefront passes, the pendula have rotated halfway and are all on the opposite side from where they started before the wavefront passed them.
+\section*{Part 3}
+By substituting $u$ into the PDE we get the following equation and expansion:
+\begin{equation}
+\begin{aligned}
+u_t +uu_x + u_{xxx} = 0\\
+v_t + w_t + (v + w)(v_x + w_x) + v_{xxx} + w_{xxx} = 0\\
+v_t + w_t + vv_x + vw_x + wv_x +ww_x + v_{xxx} + w_{xxx} = 0\\
+\end{aligned}
+\end{equation}
+After cancelling of terms we arrive at:
+\begin{equation}
+\begin{aligned}
+wv_x + vw_x = 0\\
+\frac{d}{x}(wv) = 0
+\end{aligned}
+\end{equation}
+Integration would show that in order for this solution to satisfy the PDE, $wv$ cannot be dependent upon $x$, and could only have constants and $t$ terms. Thus this solution models an interesting situation in which there is no spatial interaction between the two wave solutions.
 \end{document}

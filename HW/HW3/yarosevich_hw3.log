@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.5)  11 APR 2018 15:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.5)  11 APR 2018 17:08
 entering extended mode
 **./yarosevich_hw3.tex
 (yarosevich_hw3.tex
@@ -778,19 +778,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--74
 [1
 
 {C:/Users/zennsunni/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+[2]
 
 Package caption Warning: Unused \captionsetup[lstlisting] on input line 21.
 See the caption package documentation for explanation.
 
-[2] (yarosevich_hw3.aux) ) 
+[3] (yarosevich_hw3.aux) ) 
 Here is how much of TeX's memory you used:
  16829 strings out of 493312
  331278 string characters out of 3136295
- 358444 words of memory out of 3000000
+ 359444 words of memory out of 3000000
  20243 multiletter control sequences out of 15000+200000
  538469 words of font info for 53 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,7n,92p,10427b,275s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 53i,9n,92p,10427b,275s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
 /amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/a
 msfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
@@ -806,9 +807,9 @@ b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/
 Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Pro
 gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on yarosevich_hw3.pdf (2 pages, 151357 bytes).
+Output written on yarosevich_hw3.pdf (3 pages, 161543 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
+ 72 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
