@@ -36,7 +36,7 @@
 %	DOCUMENT INFORMATION
 %----------------------------------------------------------------------------------------
 
-\title{AMATH 353: Homework 3 \\Due April, 11 2018 \\ ID: 1064712} % Title
+\title{AMATH 353: Homework 4 \\Due April, 13 2018 \\ ID: 1064712} % Title
 
 \author{Trent \textsc{Yarosevich}} % Author name
 
@@ -70,7 +70,43 @@ This is a traveling wave solution with $c = \frac{5}{7}$ and $f$, suppose some $
 \begin{equation}
 f(z) = \frac{3}{1 + \cos^2(7z +2)}
 \end{equation}
-\section*{Part 2.)}\\
+\section*{Part 2.)}
 \subsection*{a.)}
-
+From linearized Burgers: $u_t + au_x = du_{xx}$ we get
+\begin{equation}
+\begin{aligned}
+-iwu + aiku = d(ik)^2u\\
+-iw + ai = d(ik)^2\\
+-w + ak = dik^2\\
+w = ak-dik^2\\
+\end{aligned}
+\end{equation}
+a.) is FALSE, this $c_p(k)$ is not real for real $k$ values.\\
+b.) is FALSE because the dispersion relation IS constant in respect to k, i.e. $a-dik$.
+\subsection*{b.)}
+From Schr\"odinger's equation: $iu_t + u_{xx} = 0$ we get
+\begin{equation}
+\begin{aligned}
+i(-iw)u + (ik)^2u = 0\\
+i(-iw) + (ik)^2 = 0\\
+-i^2w + i^2k^2 = 0\\
+w = k^2
+\end{aligned}
+\end{equation}
+a.) is TRUE because there are no complex numbers in the dispersion relation (and thus the phase velocity).\\
+b.) is FALSE because $c_p(k) = \frac{w}{k} = k$, so the dispersion relation IS constant with respect to k.
+\subsection*{c.)}
+From the wave equation $u_{tt} = au_{xx}$ we get:
+\begin{equation}
+\begin{aligned}
+(-iw)^2u = a(ik)^2u\\
+-(iw)^2 = a(ik)^2\\
+-i^2w^2 = ai^2k^2\\
+w^2 = -ak^2\\
+w = \sqrt{-ak^2}\\
+w = \pm i\sqrt{a}k
+\end{aligned}
+\end{equation}
+a.) is FALSE because the dispersion relation (and phase velocity) contains a complex number.\\
+b.) is TRUE because $c_p(k) = \pm i\sqrt{a}$, and is not dependent on $k$, so the equation is non-dispersive.
 \end{document}
