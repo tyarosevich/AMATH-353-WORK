@@ -70,7 +70,7 @@ If $(u,w) = (0, 0)$ then we have:
                0 = \epsilon 0
             \end{cases}
 \]
-Thus in the trivial case, $a$ and $\epsilon$ will always be a product with zero.
+Thus in the trivial case, $a$ and $\epsilon$ will always be a product with zero, and the equations will be satisfied.
 \subsection*{b.)}
 Beginning with the first equation $u_t = u_{xx} + u(u - a)(1-u) + w$ and substituting $u = \alpha\hat{u}$ and $w = \alpha\hat{w}$ (note I will expand the equation and move all terms to the LHS before substitution):
 \begin{equation}
@@ -130,7 +130,7 @@ We then apply the quadratic formula and arrive at:
 \begin{equation}
 \omega = \frac{-(ik^2 + i) \pm \sqrt{(ik^2 + i)^2 -4}}{2}
 \end{equation}
-We now simplify numerator to see if it can be arranged such that, eventually, $iw$ will be equal to some real quantity. Please note that for the sake of typesetting, the RHS denominator will be moved to the LHS while the simplification of the numerator is shown.
+We now simplify the numerator to see if it can be arranged such that, eventually, $iw$ will be equal to some real quantity. Please note that for the sake of typesetting, the RHS denominator will be moved to the LHS while the simplification of the numerator is shown.
 \begin{equation}
 \begin{aligned}
 2\omega = -(ik^2 + i) \pm \sqrt{(ik^2 + i)^2 -4}\\
@@ -178,6 +178,9 @@ Similarly with equation 10, we have the inequality
 \end{aligned}
 \end{equation}
 In this form of $\omega_-$ it is also self-evident that the inequality is never satisfied for any real $k$. In both cases, equations 9 and 10, this is because the polynomials have no roots. In this case it means that $\omega_-$ is never positive, and thus when used to find solutions of $u$ and $w$ they will always decay.
+\\
+\\
+To summarize, solutions for both $u$ and $w$ will oscillate because of the $e^{ikx}$ term; solutions using $\omega_+$ will always decay; and solutions using $\omega_-$ will always grow.
 \subsection*{f.)}
 The dispersion relation $c_p(k)$ for both $u(x,t)$ and $w(x, t)$ is 
 \begin{equation}
