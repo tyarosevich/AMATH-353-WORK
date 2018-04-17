@@ -187,4 +187,25 @@ The dispersion relation $c_p(k)$ for both $u(x,t)$ and $w(x, t)$ is
 c_p(k) = \frac{(k^2 + 1) \pm \sqrt{(k^2 + 1)^2 +4}}{2ik}
 \end{equation}
 Because $c_p(k)$ is complex (the denominator is $2ik$), this system of equations is not dispersive. 
+\section*{Part 2.)}
+\subsection*{a.)}
+Done worked through it.
+\subsection*{b.)}
+As with the example derivation we let $S$ represent an imaginary segment of string that we are considering to be on the $x$ axis, lying between $x$ and $x + \Delta x$, with $\Delta x >0$ and very small. We then utilize Newton's second law of motion, assuming that the string is moving up and down only a very small amount, such that the motion $u(x, t)$ can be taken to be perpendicular to the $x$ axis, and as such the acceleration and net force are also acting perpendicular to the $x$ axis.
+\begin{equation}
+\text{Mass of $S$)(Acceleration of $S$) = Net force acting on $S$}
+\end{equation}
+So we now need to find these terms. Acceleration is easy, as it is just the second derivative in time, $u_{tt}(x, t)$. \\
+\indent The mass of the segment $S$ is the density $\rho(x)$ times the length of $S$. The density of $S$ is thus given by $\rho (s) \approx \rho (x)$ for $x < s < x + \Delta x$.
+\begin{equation}
+\text{Mass} (S) = \int_{x}^{x + \Delta x} \rho (s) \sqrt{1 + u_x(s,t))^2}ds
+\end{equation}
+with $u_x$ assumed to be very small because the vibrations on the string are very small, thus $u_x(s,t)^2$ is approximately $0$, giving
+\begin{equation}
+\begin{aligned}
+\text{Mass} (S) = \int_{x}^{x + \Delta x} \rho (s) \sqrt{1}ds\\
+\text{Mass} (S) = \int_{x}^{x + \Delta x} \rho (s)ds
+\end{aligned}
+\end{equation}
+bla
 \end{document}
