@@ -36,7 +36,7 @@
 %	DOCUMENT INFORMATION
 %----------------------------------------------------------------------------------------
 
-\title{AMATH 353: Homework 4 \\Due April, 13 2018 \\ ID: 1064712} % Title
+\title{AMATH 353: Homework 5 \\Due April, 18 2018 \\ ID: 1064712} % Title
 
 \author{Trent \textsc{Yarosevich}} % Author name
 
@@ -62,6 +62,93 @@ Instructor: Jeremy Upsal % Instructor/supervisor
 %	SECTION 1
 %----------------------------------------------------------------------------------------
 \section*{Part 1.)} 
-
-
+\subsection*{a.)}
+If $(u,w) = (0, 0)$ then we have:
+\[
+  \begin{cases}
+               0 = 0 + 0(0 - a)(1-0) + 0\\
+               0 = \epsilon 0
+            \end{cases}
+\]
+Thus in the trivial case, $a$ and $\epsilon$ will always be a product with zero.
+\subsection*{b.)}
+Beginning with the first equation $u_t = u_{xx} + u(u - a)(1-u) + w$ and substituting $u = \alpha\hat{u}$ and $w = \alpha\hat{w}$ (note I will expand the equation and move all terms to the LHS before substitution):
+\begin{equation}
+\begin{aligned}
+u_t - u_{xx} - u^2 + u^3 + au - au^2 - w = 0\\
+\alpha\hat{u}_t - \alpha\hat{u}_{xx} - \alpha^2\hat{u}^2 + \alpha^3\hat{u}^3 + \alpha a\hat{u} - \alpha^2 a\hat{u}^2 - \hat{w} = 0\\
+\alpha (\hat{u}_t - \hat{u}_{xx} - \alpha\hat{u}^2 + \alpha^2\hat{u}^3 +  a\hat{u} - \alpha a\hat{u}^2 - \hat{w}) = 0\\
+\end{aligned}
+\end{equation}
+We then divide out the $\alpha$ that was pulled out from all the LHS terms, and cancel all remaining terms that have an $\alpha^n$ constant because it is very small, leaving
+\begin{equation}
+\hat{u}_t - \hat{u}_{xx} + a\hat{u} - \hat{w} = 0
+\end{equation}
+into which we can substitute $u$ and $w$, obtaining the linear form of the equation.\\
+\\
+For the second equation we do the same, though it is very straightforward:
+\begin{equation}
+\begin{aligned}
+\alpha\hat{w}_t - \alpha\epsilon\hat{u} = 0\\
+\alpha(\hat{w}_t - \epsilon\hat{u}) = 0\\
+\hat{w}_t - \epsilon\hat{u} = 0
+\end{aligned}
+\end{equation}
+We then substitute $u$ and $w$ here as well.
+\subsection*{c.)}
+\[
+\begin{bmatrix}
+(-iwe^{ikx - iwt} - (ik)^2e^{ikx - iwt} + e^{ikx - iwt}) & -1\\
+-1 & -iw
+\end{bmatrix}
+\begin{bmatrix}
+U\\
+W
+\end{bmatrix}
+= 0
+\]
+\subsection*{d.)}
+To begin, we divide out the $e^{ikx - iwt}$ terms in the first equation and compute the $i^2$, yielding the following matrix:
+\[
+A =
+\begin{bmatrix}
+(-iwe + k^2 + 1) & -1\\
+-1 & -iw
+\end{bmatrix}
+\]
+Taking the determinant of this matrix and expanding:
+\begin{equation}
+\begin{aligned}
+(-iw + k^2 + 1)(-iw) - (-1)(-1) = 0\\
+i^2w^2 - k^2iw - iw -1 = 0\\
+-w^2 - k^2iw -iw -1 = 0\\
+w^2 + k^2iw + iw + 1 = 0\\
+w^2 + (ik^2 + i)w + 1 =0
+\end{aligned}
+\end{equation}
+We then apply the quadratic formula and arrive at:
+\begin{equation}
+w = \frac{-(ik^2 + i) \pm \sqrt{(ik^2 + i)^2 -4}}{2}
+\end{equation}
+We now simplify numerator to see if it can be arranged such that, eventually, $iw$ will be equal to some real quantity. Please note that for the sake of typesetting, the RHS denominator will be moved to the LHS while the simplification of the numerator is shown.
+\begin{equation}
+\begin{aligned}
+2w = -(ik^2 + i) \pm \sqrt{(ik^2 + i)^2 -4}\\
+2w = -(ik^2 + i) \pm \sqrt{i^2(k^2 + 1)^2 -4}\\
+2w = -(ik^2 + i) \pm \sqrt{(-1)(k^2 + 1)^2 -4}\\
+2w = -(ik^2 + i) \pm \sqrt{(-1)((k^2 + 1)^2 +4)}\\
+2w = -(ik^2 + i) \pm \sqrt{-1}\sqrt{(k^2 + 1)^2 +4}\\
+2w = -(ik^2 + i) \pm i\sqrt{(k^2 + 1)^2 +4}\\
+2w = -i(k^2 + 1) \pm i\sqrt{(k^2 + 1)^2 +4}\\
+\end{aligned}
+\end{equation}
+We then multiply across by $i$ and simplify, yielding $iw$ equal to a real quantity:
+\begin{equation}
+\begin{aligned}
+2iw = -i^2(k^2 + 1) \pm i^2\sqrt{(k^2 + 1)^2 +4}\\
+2iw = (k^2 + 1) \pm \sqrt{(k^2 + 1)^2 +4}\\
+iw = \frac{(k^2 + 1) \pm \sqrt{(k^2 + 1)^2 +4}}{2}\\
+\end{aligned}
+\end{equation}
+bla
 \end{document}
