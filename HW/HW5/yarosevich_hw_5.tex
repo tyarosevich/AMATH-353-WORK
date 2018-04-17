@@ -147,7 +147,26 @@ We then multiply across by $i$ and simplify, yielding $iw$ equal to a real quant
 \begin{aligned}
 2iw = -i^2(k^2 + 1) \pm i^2\sqrt{(k^2 + 1)^2 +4}\\
 2iw = (k^2 + 1) \pm \sqrt{(k^2 + 1)^2 +4}\\
-iw = \frac{(k^2 + 1) \pm \sqrt{(k^2 + 1)^2 +4}}{2}\\
+\text{giving the two equations that satisfy $det(A)$}\\
+iw_+ = \frac{(k^2 + 1) + \sqrt{(k^2 + 1)^2 +4}}{2}\\
+\text{and}\\
+iw_- = \frac{(k^2 + 1) - \sqrt{(k^2 + 1)^2 +4}}{2}\\
+\end{aligned}
+\end{equation}
+\subsection*{e.)}
+If we split $u(x, t)$ and $w(x,t)$ into their real and imaginary parts and substitute in the results from part d.) we get the following equations:
+\begin{equation}
+\begin{aligned}
+u(x, t) = Ue^{-\frac{(k^2 + 1) \pm \sqrt{(k^2 + 1)^2 +4}}{2}t}e^{-ikx}\\
+\text{and}\\
+w(x, t) = We^{-\frac{(k^2 + 1) \pm \sqrt{(k^2 + 1)^2 +4}}{2}t}e^{-ikx}\\
+\end{aligned}
+\end{equation}
+Since the equations differ only in terms of their constant, we need only study one in order to determined if both will grow or decay. The question is whether or not the constant in the imaginary part is greater than zero. If it is, the exponent will be negative and the solution will decay; if it is negative, it will grow. The denominator in the dispersion relation is irrelevant in this regard, thus we must investigate the two inequalities:
+\begin{equation}
+\begin{aligned}
+(k^2 + 1) + \sqrt{(k^2 + 1)^2 +4} > 0\\
+(k^2 + 1) - \sqrt{(k^2 + 1)^2 +4} > 0
 \end{aligned}
 \end{equation}
 bla
