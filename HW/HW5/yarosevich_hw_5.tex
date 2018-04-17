@@ -98,8 +98,8 @@ We then substitute $u$ and $w$ here as well.
 \subsection*{c.)}
 \[
 \begin{bmatrix}
-(-iwe^{ikx - iwt} - (ik)^2e^{ikx - iwt} + e^{ikx - iwt}) & -1\\
--1 & -iw
+(-i\omega e^{ikx - i\omega t} - (ik)^2e^{ikx - i\omega t} + e^{ikx - i\omega t}) & -1\\
+-1 & -i\omega
 \end{bmatrix}
 \begin{bmatrix}
 U\\
@@ -108,49 +108,49 @@ W
 = 0
 \]
 \subsection*{d.)}
-To begin, we divide out the $e^{ikx - iwt}$ terms in the first equation and compute the $i^2$, yielding the following matrix:
+To begin, we divide out the $e^{ikx - i\omega t}$ terms in the first equation and compute the $i^2$, yielding the following matrix:
 \[
 A =
 \begin{bmatrix}
-(-iwe + k^2 + 1) & -1\\
--1 & -iw
+(-i\omega e + k^2 + 1) & -1\\
+-1 & -i\omega
 \end{bmatrix}
 \]
 Taking the determinant of this matrix and expanding:
 \begin{equation}
 \begin{aligned}
-(-iw + k^2 + 1)(-iw) - (-1)(-1) = 0\\
-i^2w^2 - k^2iw - iw -1 = 0\\
--w^2 - k^2iw -iw -1 = 0\\
-w^2 + k^2iw + iw + 1 = 0\\
-w^2 + (ik^2 + i)w + 1 =0
+(-i\omega + k^2 + 1)(-i\omega) - (-1)(-1) = 0\\
+i^2\omega^2 - k^2i\omega - i\omega -1 = 0\\
+-\omega^2 - k^2i\omega -i\omega -1 = 0\\
+\omega^2 + k^2i\omega + i\omega + 1 = 0\\
+\omega^2 + (ik^2 + i)\omega + 1 =0
 \end{aligned}
 \end{equation}
 We then apply the quadratic formula and arrive at:
 \begin{equation}
-w = \frac{-(ik^2 + i) \pm \sqrt{(ik^2 + i)^2 -4}}{2}
+\omega = \frac{-(ik^2 + i) \pm \sqrt{(ik^2 + i)^2 -4}}{2}
 \end{equation}
 We now simplify numerator to see if it can be arranged such that, eventually, $iw$ will be equal to some real quantity. Please note that for the sake of typesetting, the RHS denominator will be moved to the LHS while the simplification of the numerator is shown.
 \begin{equation}
 \begin{aligned}
-2w = -(ik^2 + i) \pm \sqrt{(ik^2 + i)^2 -4}\\
-2w = -(ik^2 + i) \pm \sqrt{i^2(k^2 + 1)^2 -4}\\
-2w = -(ik^2 + i) \pm \sqrt{(-1)(k^2 + 1)^2 -4}\\
-2w = -(ik^2 + i) \pm \sqrt{(-1)((k^2 + 1)^2 +4)}\\
-2w = -(ik^2 + i) \pm \sqrt{-1}\sqrt{(k^2 + 1)^2 +4}\\
-2w = -(ik^2 + i) \pm i\sqrt{(k^2 + 1)^2 +4}\\
-2w = -i(k^2 + 1) \pm i\sqrt{(k^2 + 1)^2 +4}\\
+2\omega = -(ik^2 + i) \pm \sqrt{(ik^2 + i)^2 -4}\\
+2\omega = -(ik^2 + i) \pm \sqrt{i^2(k^2 + 1)^2 -4}\\
+2\omega = -(ik^2 + i) \pm \sqrt{(-1)(k^2 + 1)^2 -4}\\
+2\omega = -(ik^2 + i) \pm \sqrt{(-1)((k^2 + 1)^2 +4)}\\
+2\omega = -(ik^2 + i) \pm \sqrt{-1}\sqrt{(k^2 + 1)^2 +4}\\
+2\omega = -(ik^2 + i) \pm i\sqrt{(k^2 + 1)^2 +4}\\
+2\omega = -i(k^2 + 1) \pm i\sqrt{(k^2 + 1)^2 +4}\\
 \end{aligned}
 \end{equation}
 We then multiply across by $i$ and simplify, yielding $iw$ equal to a real quantity:
 \begin{equation}
 \begin{aligned}
-2iw = -i^2(k^2 + 1) \pm i^2\sqrt{(k^2 + 1)^2 +4}\\
-2iw = (k^2 + 1) \pm \sqrt{(k^2 + 1)^2 +4}\\
+2i\omega = -i^2(k^2 + 1) \pm i^2\sqrt{(k^2 + 1)^2 +4}\\
+2i\omega = (k^2 + 1) \pm \sqrt{(k^2 + 1)^2 +4}\\
 \text{giving the two equations that satisfy $det(A)$}\\
-iw_+ = \frac{(k^2 + 1) + \sqrt{(k^2 + 1)^2 +4}}{2}\\
+i\omega_+ = \frac{(k^2 + 1) + \sqrt{(k^2 + 1)^2 +4}}{2}\\
 \text{and}\\
-iw_- = \frac{(k^2 + 1) - \sqrt{(k^2 + 1)^2 +4}}{2}\\
+i\omega_- = \frac{(k^2 + 1) - \sqrt{(k^2 + 1)^2 +4}}{2}\\
 \end{aligned}
 \end{equation}
 \subsection*{e.)}
@@ -162,12 +162,26 @@ u(x, t) = Ue^{-\frac{(k^2 + 1) \pm \sqrt{(k^2 + 1)^2 +4}}{2}t}e^{-ikx}\\
 w(x, t) = We^{-\frac{(k^2 + 1) \pm \sqrt{(k^2 + 1)^2 +4}}{2}t}e^{-ikx}\\
 \end{aligned}
 \end{equation}
-Since the equations differ only in terms of their constant, we need only study one in order to determined if both will grow or decay. The question is whether or not the constant in the imaginary part is greater than zero. If it is, the exponent will be negative and the solution will decay; if it is negative, it will grow. The denominator in the dispersion relation is irrelevant in this regard, thus we must investigate the two inequalities:
+Since the equations differ only in terms of their constant, we need only study one in order to determined if both will grow or decay. The question is whether or not the constant in the imaginary part is greater than zero. If it is, the exponent will be negative and the solution will decay; if it is negative, it will grow. The denominator in $\omega$ is irrelevant in this regard, thus we must investigate the two inequalities:
+\begin{equation}
+(k^2 + 1) + \sqrt{(k^2 + 1)^2 +4} > 0
+\end{equation}
+\begin{equation}
+(k^2 + 1) - \sqrt{(k^2 + 1)^2 +4} > 0
+\end{equation}
+In equation 9, it is self-evident that this inequality is always true for any real $k$, since all $k$ values are squared and no subtraction takes place. This in turn means that for $\omega_+$ both $u$ and $w$ will decay with all real $k$ values.
+Similarly with equation 10, we have the inequality
 \begin{equation}
 \begin{aligned}
-(k^2 + 1) + \sqrt{(k^2 + 1)^2 +4} > 0\\
-(k^2 + 1) - \sqrt{(k^2 + 1)^2 +4} > 0
+(k^2 + 1) > \sqrt{(k^2 + 1)^2 +4}\\
+(k^2 + 1)^2 > (k^2 +1)^2 + 4
 \end{aligned}
 \end{equation}
-bla
+In this form of $\omega_-$ it is also self-evident that the inequality is never satisfied for any real $k$. In both cases, equations 9 and 10, this is because the polynomials have no roots. In this case it means that $\omega_-$ is never positive, and thus when used to find solutions of $u$ and $w$ they will always decay.
+\subsection*{f.)}
+The dispersion relation $c_p(k)$ for both $u(x,t)$ and $w(x, t)$ is 
+\begin{equation}
+c_p(k) = \frac{(k^2 + 1) \pm \sqrt{(k^2 + 1)^2 +4}}{2ik}
+\end{equation}
+Because $c_p(k)$ is complex (the denominator is $2ik$), this system of equations is not dispersive. 
 \end{document}
