@@ -12,6 +12,7 @@
 \usepackage{caption}
 \usepackage{subcaption}
 
+\newcommand{\R}{\mathbb{R}}
 
 \usepackage{xcolor}
 
@@ -147,14 +148,14 @@ We then multiply across by $i$ and simplify, yielding $iw$ equal to a real quant
 \begin{aligned}
 2i\omega = -i^2(k^2 + 1) \pm i^2\sqrt{(k^2 + 1)^2 +4}\\
 2i\omega = (k^2 + 1) \pm \sqrt{(k^2 + 1)^2 +4}\\
-\text{giving the two equations that satisfy $det(A)$}\\
+\text{giving the two equations that satisfy $det(A) = 0$}\\
 i\omega_+ = \frac{(k^2 + 1) + \sqrt{(k^2 + 1)^2 +4}}{2}\\
 \text{and}\\
 i\omega_- = \frac{(k^2 + 1) - \sqrt{(k^2 + 1)^2 +4}}{2}\\
 \end{aligned}
 \end{equation}
 \subsection*{e.)}
-If we split $u(x, t)$ and $w(x,t)$ into their real and imaginary parts and substitute in the results from part d.) we get the following equations:
+We now substitute the results from part d.) into the ansatz $e^{-iwt}e^{ikx}$ with $w = a + ib$ to separate the real and imaginary parts of omega. Note that omega has no real part, so we are substituting $iw$ from above to study the real part of $iw$, which I believe corresponds to $b$.
 \begin{equation}
 \begin{aligned}
 u(x, t) = Ue^{-\frac{(k^2 + 1) \pm \sqrt{(k^2 + 1)^2 +4}}{2}t}e^{ikx}\\
@@ -162,7 +163,7 @@ u(x, t) = Ue^{-\frac{(k^2 + 1) \pm \sqrt{(k^2 + 1)^2 +4}}{2}t}e^{ikx}\\
 w(x, t) = We^{-\frac{(k^2 + 1) \pm \sqrt{(k^2 + 1)^2 +4}}{2}t}e^{ikx}\\
 \end{aligned}
 \end{equation}
-Since the equations differ only in terms of their constant, we need only study one in order to determined if both will grow or decay. The question is whether or not the constant in the imaginary part is greater than zero. If it is, the exponent will be negative and the solution will decay; if it is negative, it will grow. The denominator in $\omega$ is irrelevant in this regard, thus we must investigate the two inequalities:
+Since the equations differ only in terms of their constant, we need only study one in order to determined if both will grow or decay. The question is whether or not this quantity is greater than zero for $k \in \R$. If it is, the exponent will be negative and the solution will decay; if it is negative, it will grow. The denominator in $\omega$ is irrelevant in this regard, thus we must investigate the two inequalities:
 \begin{equation}
 (k^2 + 1) + \sqrt{(k^2 + 1)^2 +4} > 0
 \end{equation}
@@ -180,7 +181,7 @@ Similarly with equation 10, we have the inequality
 In this form of $\omega_-$ it is also self-evident that the inequality is never satisfied for any real $k$. In both cases, equations 9 and 10, this is because the polynomials have no roots. In this case it means that $\omega_-$ is never positive, and thus when used to find solutions of $u$ and $w$ they will always decay.
 \\
 \\
-To summarize, solutions for both $u$ and $w$ will oscillate because of the $e^{ikx}$ term; solutions using $\omega_+$ will always decay; and solutions using $\omega_-$ will always grow.
+To summarize, solutions for both $u$ and $w$ will not oscillate because $\omega$ has no real part, so there are no complex numbers in the exponential when we substitute in $iw$; solutions using $\omega_+$ will always decay; and solutions using $\omega_-$ will always grow.
 \subsection*{f.)}
 The dispersion relation $c_p(k)$ for both $u(x,t)$ and $w(x, t)$ is 
 \begin{equation}
@@ -193,19 +194,54 @@ Done worked through it.
 \subsection*{b.)}
 As with the example derivation we let $S$ represent an imaginary segment of string that we are considering to be on the $x$ axis, lying between $x$ and $x + \Delta x$, with $\Delta x >0$ and very small. We then utilize Newton's second law of motion, assuming that the string is moving up and down only a very small amount, such that the motion $u(x, t)$ can be taken to be perpendicular to the $x$ axis, and as such the acceleration and net force are also acting perpendicular to the $x$ axis.
 \begin{equation}
-\text{Mass of $S$)(Acceleration of $S$) = Net force acting on $S$}
+\text{(Mass of $S$)(Acceleration of $S$) = Net force acting on $S$}
 \end{equation}
 So we now need to find these terms. Acceleration is easy, as it is just the second derivative in time, $u_{tt}(x, t)$. \\
-\indent The mass of the segment $S$ is the density $\rho(x)$ times the length of $S$. The density of $S$ is thus given by $\rho (s) \approx \rho (x)$ for $x < s < x + \Delta x$.
+\\
+The mass of the segment $S$ is the density $\rho(x)$ times the length of $S$. The density of $S$ is thus given by $\rho (s) \approx \rho (x)$ for $x < s < x + \Delta x$.
 \begin{equation}
 \text{Mass} (S) = \int_{x}^{x + \Delta x} \rho (s) \sqrt{1 + u_x(s,t))^2}ds
 \end{equation}
-with $u_x$ assumed to be very small because the vibrations on the string are very small, thus $u_x(s,t)^2$ is approximately $0$, giving
+with $u_x$ assumed to be very small because the vibrations are small (i.e. the string is nearly flat), thus $u_x(s,t)^2$ is approximately $0$, giving
 \begin{equation}
 \begin{aligned}
 \text{Mass} (S) = \int_{x}^{x + \Delta x} \rho (s) \sqrt{1}ds\\
-\text{Mass} (S) = \int_{x}^{x + \Delta x} \rho (s)ds
+\text{Mass} (S) = \int_{x}^{x + \Delta x} \rho (s)ds\\
+\\
+\text{letting } P(x) \text{ be the antiderivative of } p(x)\\
+\\
+\int_{x}^{x + \Delta x} \rho (s)ds = P(x + \Delta x) - P(x) + C\\
 \end{aligned}
 \end{equation}
-bla
+We then substitute this into the force equation letting $C = 0$. \\
+\\
+This leaves tension, which is now defined as $T(x)$. On our small segment then, we need to calculate the vertical component of the tension as it pulls the string back down (or up) toward the x axis. This is calculated on the left side of our segment by multiplying $T(x)$ by a unit vector tangent to the string at $x$:
+\begin{equation}
+T(x)\frac{-(1, u_x(x,t))}{\sqrt{1 + (u_x(x,t)^2}}
+\end{equation}
+Moving the negative sign out represents the tension pulling left, and because we want the downward portion of this vector, we simply keep that component of the vector in the numerator, i.e. $u_x(x,t)$. Again because of small vibrations the quantity $u_x(x,t)^2$ is trivial when added to $1$, so we simply get $\sqrt{1}$ in the denominator, yielding:
+\begin{equation}
+-T(x)u_x(x,t)
+\end{equation}
+The tension pulling to the right proceeds in precisely the same way, however in a positive vector pulling right, and with the tension pulling right defined at that point of the segment, $T(x + \Delta x)$. This gives:
+\begin{equation}
+T(x+ \Delta x)u_x(x + \Delta x, t)
+\end{equation}
+We now have the net force acting on $S$ and the following equation:
+\begin{equation}
+(P(x + \Delta x) - P(x))(u_{tt}) = T(x+ \Delta x)u_x(x + \Delta x, t) - T(x)u_x(x, t)
+\end{equation}
+Dividing across by $\Delta x$ we then have the following:
+\begin{equation}
+\frac{P(x + \Delta x) - P(x)}{\Delta x}(u_{tt}) = \frac{T(x+ \Delta x)u_x(x + \Delta x) - T(x)u_x(x, t)}{\Delta x}
+\end{equation}
+By the fundamental theorem we then have the mass equivalent to the derivative of $P(x)$, and since this is the antiderivative of $p(x)$, this simply remains $p(x)$. Similarly on the right side the net force becomes the derivative of $T(x)u_x(x,t)$, giving the final equation (with $T(x)$ part of the second derivative of $u$):
+\begin{equation}
+p(x)(u_{tt}) = \frac{d}{dx}(T(x)u_x(x,t))
+\end{equation}
+\subsection*{c.)}
+If the string's resting position is taken to be the x-axis, the linear restoring force $-Ru$ pulls the string back down when it's position goes up ($u > 0$) and pushes it back up when it's position goes down ($u<0$).
+\\
+\\
+The friction quantity $-Fu_t$ is opposite in sign from the velocity because the faster the string is moving through some media, the great the friction will be. Presumably $F$ would have to be some positive real number $0 < F < 1$, otherwise some pretty weird, Physics-defying things would happen.
 \end{document}

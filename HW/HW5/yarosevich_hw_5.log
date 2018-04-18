@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.5)  17 APR 2018 16:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.5)  18 APR 2018 16:53
 entering extended mode
 **./yarosevich_hw_5.tex
 (yarosevich_hw_5.tex
@@ -672,25 +672,25 @@ Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
 ) (yarosevich_hw_5.aux)
 \openout1 = `yarosevich_hw_5.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 45.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 46.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    ... okay on input line 46.
 
 (C:\Users\zennsunni\AppData\Roaming\MiKTeX\2.9\tex\latex\translator\translator-
 basic-dictionary-English.dict
@@ -771,7 +771,7 @@ Package caption Info: End \AtBeginDocument code.
 \c__siunitx_mathsf_int=\count296
 \c__siunitx_mathtt_int=\count297
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--90
+Underfull \hbox (badness 10000) in paragraph at lines 87--91
 
  []
 
@@ -779,21 +779,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--90
 
 {C:/Users/zennsunni/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 179--184
+! Undefined control sequence.
+\R ->\mathbb 
+             {R}
+l.166 ...antity is greater than zero for $k \in \R
+                                                  $. If it is, the exponent ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 180--185
 
  []
 
 [3]
+Underfull \hbox (badness 10000) in paragraph at lines 198--202
 
-Package caption Warning: Unused \captionsetup[lstlisting] on input line 21.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--219
+
+ []
+
+[4]
+
+Package caption Warning: Unused \captionsetup[lstlisting] on input line 22.
 See the caption package documentation for explanation.
 
-[4] (yarosevich_hw_5.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 243--247
+
+ []
+
+[5] (yarosevich_hw_5.aux) ) 
 Here is how much of TeX's memory you used:
- 16829 strings out of 493312
- 331288 string characters out of 3136295
- 361447 words of memory out of 3000000
- 20243 multiletter control sequences out of 15000+200000
+ 16830 strings out of 493312
+ 331294 string characters out of 3136295
+ 361453 words of memory out of 3000000
+ 20244 multiletter control sequences out of 15000+200000
  538469 words of font info for 53 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,12n,92p,10428b,275s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -811,9 +838,9 @@ r12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/P
 rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Prog
 ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on yarosevich_hw_5.pdf (4 pages, 156428 bytes).
+Output written on yarosevich_hw_5.pdf (5 pages, 162563 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
+ 74 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
