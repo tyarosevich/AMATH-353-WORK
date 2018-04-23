@@ -37,7 +37,7 @@
 %	DOCUMENT INFORMATION
 %----------------------------------------------------------------------------------------
 
-\title{AMATH 353: Homework 6 \\Due April, 20 2018 \\ ID: 1064712} % Title
+\title{AMATH 353: Homework 7 \\Due April, 23 2018 \\ ID: 1064712} % Title
 
 \author{Trent \textsc{Yarosevich}} % Author name
 
@@ -85,23 +85,16 @@ and
                -g(-x), x < 0
             \end{cases}
 \]
-Next, note that $\int_{x-ct}^{x+ct} g_0(s)ds = 0$ because it sums two equal but opposite areas mirrored across the x-axis. Now plugging the solution into the wave equation:
+This gives
 \begin{equation}
-\frac{\partial}{\partial t} (\frac{\partial}{\partial t}(f_0(x-ct) + f_0(x + ct))) = c^2 \frac{\partial}{\partial x} (\frac{\partial}{\partial x}(f_0(x-ct) + f_0(x + ct)))
+u(x,t) = \frac{1}{2}(f_0(x-ct) + f(x+ct)) + \frac{1}{2c}\int_{x-ct}^{x+ct}g_0(s)ds
 \end{equation}
-\begin{equation}
-\frac{\partial}{\partial t}(-cf_{0,t}(x-ct) + cf_{0,t}(x + ct)) = c^2 \frac{\partial}{\partial x}(f_{0,x}(x-ct) + f_{0,x}(x + ct))\\
-\end{equation}
-\begin{equation}
-c^2(f_{0,tt}(x-ct) + f_{0,tt}(x + ct)) = c^2(f_{0,xx}(x-ct) + f_{0,xx}(x + ct))\\
-\end{equation}
-By superposition, this satisfies the PDE.\\
 \\
-Now the side conditions:
+Now the side conditions, with the integral of $g_0$ being zero because it is a definite integral across a zero domain:
 \begin{equation}
 u(x,0) = \frac{1}{2}(f_0(x) + f_0(x)) + 0 = f_0(x)
 \end{equation}
-And since solutions are restricted to $x\geq 0$ an there is no $t$ term we have $f_0(x) = f(x)$.\\
+And since solutions are restricted to $x\geq 0$ and there is no $t$ term we have $f_0(x) = f(x)$.\\
 \\
 Now consider the following with $G_0(s) = \int g_0(s)ds$:
 \begin{equation}
@@ -118,9 +111,26 @@ Lastly for the BC we have the following:
 \begin{equation}
 u(0, t) = \frac{1}{2}(f_0(-ct) + f_0(ct)) + \frac{1}{2c}(G_0(ct) - G_0(-ct))\\
 \end{equation}
-And because $f_0$ is an odd function, $f_0(-ct) = -f_0(ct)$, and because $G_0$ is an even function, $G_0(-ct) = G_0(ct)$ yielding:
+And because $f_0$ is an odd function, $f_0(-ct) = -f_0(ct)$, and because $G_0$ is the integral of an odd function, I am assuming it must be an even function\footnote{I didn't look all that hard for an authoritative proof of this, but there is one here that my admittedly ignorant self finds convincing: https://math.stackexchange.com/questions/2227677/proof-that-integral-of-odd-function-is-even-function}, so $G_0(-ct) = G_0(ct)$ yielding:
 \begin{equation}
 u(0, t) = \frac{1}{2}(-f_0(ct) + f_0(ct)) + \frac{1}{2c}(G_0(ct) - G_0(ct))= 0\\
 \end{equation}
-bla
+\section*{Part 2}
+\[f_0(x) =
+  \begin{cases}
+               -\cos (x) + 1 , x > 0\\
+               \cos(x) - 1, x < 0
+            \end{cases}
+\]
+and
+\[g_0(x) =
+  \begin{cases}
+               xe^{-x^2} , x > 0\\
+               xe^{-x^2}, x < 0
+            \end{cases}
+\]
+Note that $xe^{-x^2}$ is the odd extension of itself and $\int g_0(s)ds = -\frac{1}{2}e^{-(s)^2}$ (constant of integration is zero), and $c = \sqrt{81} = 9$. From this we get the solution:
+\begin{equation}
+u(x,t) = \frac{1}{2}(f_0(x - 9t) + f_0(x + 9t))  +\frac{1}{36}(-e^{-(x+9t)^2} + e^{-(x-9t)^2})
+\end{equation}
 \end{document}

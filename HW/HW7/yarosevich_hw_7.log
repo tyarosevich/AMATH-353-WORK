@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.5)  22 APR 2018 19:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.5)  23 APR 2018 15:32
 entering extended mode
 **./yarosevich_hw_7.tex
 (yarosevich_hw_7.tex
@@ -771,20 +771,33 @@ Package caption Info: End \AtBeginDocument code.
 \c__siunitx_mathsf_int=\count296
 \c__siunitx_mathtt_int=\count297
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--101
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 103--107
+Underfull \hbox (badness 10000) in paragraph at lines 96--100
 
  []
 
 [1
 
 {C:/Users/zennsunni/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 114--118
+Underfull \hbox (badness 10000) in paragraph at lines 107--111
 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--114
+[][]\OT1/cmr/m/n/8 I didn't look all that hard for an au-thor-i-ta-tive proof o
+f this, but
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--114
+\OT1/cmr/m/n/8 there is one here that my ad-mit-tedly ig-no-rant self finds con
+-vinc-ing:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--114
+\OT1/cmr/m/n/8 https://math.stackexchange.com/questions/2227677/proof-that-inte
+gral-of-odd-function-
  []
 
 
@@ -795,11 +808,11 @@ See the caption package documentation for explanation.
 Here is how much of TeX's memory you used:
  16826 strings out of 493312
  331232 string characters out of 3136295
- 358453 words of memory out of 3000000
+ 359453 words of memory out of 3000000
  20240 multiletter control sequences out of 15000+200000
  538162 words of font info for 52 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,7n,92p,10428b,275s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 53i,8n,92p,10428b,275s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
 amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/a
@@ -808,12 +821,15 @@ fonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-r17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.
-pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on yarosevich_hw_7.pdf (2 pages, 117230 bytes).
+r17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.
+pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/
+Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on yarosevich_hw_7.pdf (2 pages, 149394 bytes).
 PDF statistics:
- 53 PDF objects out of 1000 (max. 8388607)
+ 65 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
