@@ -1,0 +1,126 @@
+\documentclass{article}
+
+\usepackage{siunitx} % Provides the \SI{}{} and \si{} command for typesetting SI units
+\usepackage{graphicx} % Required for the inclusion of images
+\usepackage{amsmath} % Required for some math elements 
+\usepackage[export]{adjustbox} % loads also graphicx
+\usepackage{listings}
+\usepackage{matlab-prettifier}
+\usepackage{float}
+
+\usepackage{titlesec}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\newcommand{\R}{\mathbb{R}}
+
+\usepackage{xcolor}
+
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{%
+  \parbox{\textwidth}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}\vskip-4pt}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\lstset{frame=lrb,xleftmargin=\fboxsep,xrightmargin=-\fboxsep}
+\titleformat{\section}[runin]
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}[runin]
+  {\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+
+%\usepackage{times} % Uncomment to use the Times New Roman font
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{AMATH 353: Homework 6 \\Due April, 20 2018 \\ ID: 1064712} % Title
+
+\author{Trent \textsc{Yarosevich}} % Author name
+
+\date{\today} % Date for the report
+
+\begin{document}
+\maketitle % Insert the title, author and date
+\setlength\parindent{1cm}
+
+\begin{center}
+\begin{tabular}{l r}
+%Date Performed: December 1, 2017 \\ % Date the experiment was performed
+Instructor: Jeremy Upsal % Instructor/supervisor
+\end{tabular}
+\end{center}
+
+% If you wish to include an abstract, uncomment the lines below
+% \begin{abstract}
+% Abstract text
+% \end{abstract}
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+\section*{Part 1.)} 
+Since $f_0$ is an odd function, we have:
+\begin{equation}
+\begin{aligned}
+f_0(z) = -f_0(-z)\\
+f'_0(z) = f'_0(-z)\\
+f_0''(z) = -f_0''(-z)
+\end{aligned}
+\end{equation}
+First we extend the problem to the entire real line and define $f_0$ and $g_0$ as follows:
+\[f_0(x) =
+  \begin{cases}
+               f(x) , x > 0\\
+               -f(-x), x < 0
+            \end{cases}
+\]
+and
+\[g_0(x) =
+  \begin{cases}
+               g(x) , x > 0\\
+               -g(-x), x < 0
+            \end{cases}
+\]
+Next, note that $\int_{x-ct}^{x+ct} g_0(s)ds = 0$ because it sums two equal but opposite areas mirrored across the x-axis. Now plugging the solution into the wave equation:
+\begin{equation}
+\frac{\partial}{\partial t} (\frac{\partial}{\partial t}(f_0(x-ct) + f_0(x + ct))) = c^2 \frac{\partial}{\partial x} (\frac{\partial}{\partial x}(f_0(x-ct) + f_0(x + ct)))
+\end{equation}
+\begin{equation}
+\frac{\partial}{\partial t}(-cf_{0,t}(x-ct) + cf_{0,t}(x + ct)) = c^2 \frac{\partial}{\partial x}(f_{0,x}(x-ct) + f_{0,x}(x + ct))\\
+\end{equation}
+\begin{equation}
+c^2(f_{0,tt}(x-ct) + f_{0,tt}(x + ct)) = c^2(f_{0,xx}(x-ct) + f_{0,xx}(x + ct))\\
+\end{equation}
+By superposition, this satisfies the PDE.\\
+\\
+Now the side conditions:
+\begin{equation}
+u(x,0) = \frac{1}{2}(f_0(x) + f_0(x)) + 0 = f_0(x)
+\end{equation}
+And since solutions are restricted to $x\geq 0$ an there is no $t$ term we have $f_0(x) = f(x)$.\\
+\\
+Now consider the following with $G_0(s) = \int g_0(s)ds$:
+\begin{equation}
+\begin{aligned}
+u_t(x, t) = \frac{1}{2}(-cf_{0,t}(x-ct) + cf_{0,t}(x+ct)) + \frac{1}{2c} \frac{\partial}{\partial t}(G_0(x+ct) - G_0(x - ct))\\
+u_t(x, t) = \frac{1}{2}(-cf_{0,t}(x-ct) + cf_{0,t}(x+ct)) + \frac{1}{2c}(cg_0(x+ct) + cg_0(x - ct))\\
+u_t(x, 0) = \frac{1}{2}(-cf_0'(x) + cf_0'(x)) + \frac{1}{2c}(cg_0(x) + cg_0(x))\\
+u_t(x,0) = 0 + g_0(x)
+\end{aligned}
+\end{equation}
+And again because of the restricted $x$ and $t = 0$ we get $u_t(x,0) = g_0(x) = g(x)$.\\
+\\
+Lastly for the BC we have the following:
+\begin{equation}
+u(0, t) = \frac{1}{2}(f_0(-ct) + f_0(ct)) + \frac{1}{2c}(G_0(ct) - G_0(-ct))\\
+\end{equation}
+And because $f_0$ is an odd function, $f_0(-ct) = -f_0(ct)$, and because $G_0$ is an even function, $G_0(-ct) = G_0(ct)$ yielding:
+\begin{equation}
+u(0, t) = \frac{1}{2}(-f_0(ct) + f_0(ct)) + \frac{1}{2c}(G_0(ct) - G_0(ct))= 0\\
+\end{equation}
+bla
+\end{document}
