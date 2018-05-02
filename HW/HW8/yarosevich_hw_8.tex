@@ -175,5 +175,40 @@ Similarly to the previous equation, setting $\lambda = 0$ and integrating twice 
 F(x) = A + Bx
 \end{equation}
 which gives only trivial solutions in a manner identical to above, Part 2, subsection a.).
-
+\subsection*{$\lambda > 0$}~\\
+\\
+As above we'll let $\lambda = r^2$ with $r \in \mathbb{Z}^+$ giving:
+\begin{equation}
+\begin{aligned}
+F''(x) = \frac{r^2}{\kappa} F(x)\\
+F''(x) = (\frac{r}{\sqrt{\kappa}})^2 F(x)
+\end{aligned}
+\end{equation}
+As above, by ansatz this results in 
+\begin{equation}
+F(x) = C_1e^{\frac{r}{\sqrt{\kappa}}x} + C_2e^{-\frac{r}{\sqrt{\kappa}}x}
+\end{equation}
+This lambda yields trivial solutions for the same reasons as $\lambda <0$ in the previous equation, as shown in equations (11) and (12). The only difference are the coefficients, which don't affect the validity of this particular lambda.
+\subsection*{$\lambda < 0$}~\\
+\\
+As in the case above for the previous equation, equations (6), (7), and (8) we have an oscillatory solution when $\lambda<0$. 
+\begin{equation}
+F(x) = C_1\cos(\frac{r}{\sqrt{\kappa}}x) + C_2\sin(\frac{r}{\sqrt{\kappa}}x)
+\end{equation}
+As before, the cosine is dropped to satisfy the first BC. The second is very slightly different since the $\sqrt{\kappa}$ cancels:
+\begin{equation}
+\begin{aligned}
+F'(x) = C\frac{r}{\sqrt{\kappa}}\cos(\frac{r}{\sqrt{\kappa}}x)\\
+F'(L) = C\frac{r}{\sqrt{\kappa}}\cos(\frac{r}{\sqrt{\kappa}}L) = 0\\
+\frac{r}{\sqrt{\kappa}}L = \frac{\pi(2n-1)}{2}\\
+r = \frac{\pi\sqrt{\kappa}(2n-1)}{2L}
+\end{aligned}
+\end{equation}
+When we plug this r value back into $F(x)$, the $\kappa$ value cancels giving:
+\begin{equation}
+F(x)_n = C_n\sin(\frac{\pi(2n-1)}{2L}x)
+\end{equation}
+That the $\sqrt{\kappa}$ should cancel makes sense, since it is a diffusion term affecting the time velocity, and it does \underline{not} cancel if we solve the $t$ equation, instead appearing as a damping term (if $\kappa > 0$ which it is).\\
+\\
+So to summarize the only allowable value for lambda is $\lambda < 0$, yielding the eigenfunctions in (19).
 \end{document}
