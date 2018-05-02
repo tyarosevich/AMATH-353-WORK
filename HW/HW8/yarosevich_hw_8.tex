@@ -7,6 +7,8 @@
 \usepackage{listings}
 \usepackage{matlab-prettifier}
 \usepackage{float}
+\usepackage[most]{tcolorbox}
+\usepackage{amsfonts}
 
 \usepackage{titlesec}
 \usepackage{caption}
@@ -37,7 +39,7 @@
 %	DOCUMENT INFORMATION
 %----------------------------------------------------------------------------------------
 
-\title{AMATH 353: Homework 7 \\Due April, 23 2018 \\ ID: 1064712} % Title
+\title{AMATH 353: Homework 8 \\Due May, 2 2018 \\ ID: 1064712} % Title
 
 \author{Trent \textsc{Yarosevich}} % Author name
 
@@ -62,6 +64,116 @@ Instructor: Jeremy Upsal % Instructor/supervisor
 %----------------------------------------------------------------------------------------
 %	SECTION 1
 %----------------------------------------------------------------------------------------
-\section*{Part 1.)} 
+\section*{Part 1} 
+\subsection*{a.)}
+Assuming solutions of the form $u(x,t) = G(t)F(x)$ and the PDE $u_{tt} + u_{xx} = 0$ we get the following:
+\begin{equation}
+\begin{aligned}
+G''(t)F(x) = -F''(x)G(t)\\
+\frac{G''(t)}{G(t)} = -\frac{F''(x)}{F(x)} = \lambda
+\end{aligned}
+\end{equation}
+The two equations are equal to the constant $\lambda $ because neither the RHS or LHS is in terms of its independent variable. This results in the two ODEs:
+%\begin{tcolorbox}[minipage,colback=white,arc=0pt,outer arc=0pt]
+\begin{equation}
+\begin{aligned}
+G''(t) = \lambda G(t)\\
+F''(x) = - \lambda F(x)
+\end{aligned}
+\end{equation}
+%\end{tcolorbox}
+\subsection*{b.)}
+Assuming solutions of the form $u(x,t) = G(t)F(x)$ and the PDE $u_t = \kappa u_{xx}$ we get the following:
+\begin{equation}
+\begin{aligned}
+G'(t)F(x) = \kappa F''(x)G(t)\\
+\frac{G'(t)}{G(t)} = \kappa \frac{F''(x)}{F(x)} = \lambda
+\end{aligned}
+\end{equation}
+The two equations are equal to the constant $\lambda $ as above, yielding the two ODEs:
+%\begin{tcolorbox}[minipage,colback=white,arc=0pt,outer arc=0pt]
+\begin{equation}
+\begin{aligned}
+G'(t) = \lambda G(t)\\
+F''(x) = \frac{\lambda}{\kappa} F(x)
+\end{aligned}
+\end{equation}
+%\end{tcolorbox}
+\section*{Part 2}
+\subsection*{a.)}
+Starting with the equation $u_{tt} + u_{xx} = 0$ we have the following $x$ dependent ODE and three cases for $\lambda$:
+\begin{equation}
+F''(x) = -\lambda F(x)
+\end{equation}
+\subsection*{$lambda = 0$}~\newline 
+\\
+In this case we have $F''(x) = - 0 * F(x)$. Integrating twice gives $F(x) = A + Bx$. With the BC $u(0,t) = 0$ we get $F(0) = A + B(0) = 0$ and thus $A = 0$. With the other BC $u_x(L,t) = 0$ and $F'(L) = B$ we must conclude that $B=0$ as well, yielding only trivial solutions, so \underline{$\lambda = 0$ is not an allowed value.}
+\subsection*{$\lambda > 0$}~\\
+\\
+In this case we have $F''(x) = -\lambda F(x)$ where $\lambda$ is a positive real number. Let $\lambda = r^2$, with $r \in \mathbb{R}_{>0}$. Then by characteristic polynomial we get following, per Euler's Formula:
+\begin{equation}
+\begin{aligned}
+F(x) = C_1e^{irx} + C_2e^{-irx}\\
+F(x) = C_1\cos(rx)+C_2sin(rx)
+\end{aligned}
+\end{equation}
+We then apply the BC $u(0,t) = 0$:
+\begin{equation}
+\begin{aligned}
+F(0) = C_1\cos(0) + C_2\sin(0) = 0\\
+C_1 = 0\\
+F(x) = C_2\sin(rx)
+\end{aligned}
+\end{equation}
+And then the second BC:
+\begin{equation}
+\begin{aligned}
+F'(x) = C_2r\cos(rx)\\
+F'(L) = C_2r\cos(rL) = 0
+\end{aligned}
+\end{equation}
+Because $\cos(x) = 0$ at odd multiples of $\frac{\pi}{2}$ it follows that to satisfy the second BC without setting $C_2 = 0$ that we must have the argument of cosine, $rL = \frac{\pi(2n-1)}{2}$ where $n > 0$ is a positive integer. Thus with positive eigenvalues $\lambda$ we have the eigenfunctions:
+\begin{equation}
+F_n(x) = C_n\sin(\frac{\pi(2n-1)x}{2L} \text{ , } n \in \mathbb{Z}^+
+\end{equation}
+\subsection*{$\lambda < 0$}~\\
+\\
+In the same fashion as above, but now let $\lambda = -r^2$, $r \in \mathbb{R}_{>0}$. From characteristic polynomial we then get:
+\begin{equation}
+F(x) = C_1e^{rx} + C_2e^{-rx}
+\end{equation}
+Applying the first BC we get:
+\begin{equation}
+\begin{aligned}
+F(0) = C_1e^{0} + C_2e^{-0} = 0\\
+C_1 + C_2 = 0\\
+C_2 = - C_1\\
+F(x) = C(e^{rx} - e^{-rx})
+\end{aligned}
+\end{equation}
+Then applying this to the second BC:
+\begin{equation}
+\begin{aligned}
+F'(x) = C(re^{rx} + re^{-rx})\\
+F'(L) = C(re^{rL} + re^{-rL}) = 0\\
+e^{rL} = -e^{-rL}
+\end{aligned}
+\end{equation}
+Since there is no possibility of $e^{rL} = -e^{-rL}$, this means the only way to satisfy the BCs with $\lambda < 0$ is to have $C = 0$, yielding a trivial solution. Thus \underline{$\lambda < 0$ is not an allowed value.}
+\subsection*{b.)}
+We now consider the same possible values for $\lambda$ for the second equation from above, and the ODE for $x$:
+\begin{equation}
+\begin{aligned}
+u_t = \kappa u_{xx}\\
+F''(x) = \frac{\lambda}{\kappa} F(x)
+\end{aligned}
+\end{equation}
+\subsection*{$\lambda = 0$}~\\
+\\
+Similarly to the previous equation, setting $\lambda = 0$ and integrating twice gives us
+\begin{equation}
+F(x) = A + Bx
+\end{equation}
+which gives only trivial solutions in a manner identical to above, Part 2, subsection a.).
 
 \end{document}
