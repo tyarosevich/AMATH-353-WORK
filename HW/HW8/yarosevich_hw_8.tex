@@ -177,7 +177,7 @@ F(x) = A + Bx
 which gives only trivial solutions in a manner identical to above, Part 2, subsection a.).
 \subsection*{$\lambda > 0$}~\\
 \\
-As above we'll let $\lambda = r^2$ with $r \in \mathbb{Z}^+$ giving:
+As above we'll let $\lambda = r^2$ with $r \in \mathbb{R}_{>0}$ giving:
 \begin{equation}
 \begin{aligned}
 F''(x) = \frac{r^2}{\kappa} F(x)\\
@@ -191,11 +191,11 @@ F(x) = C_1e^{\frac{r}{\sqrt{\kappa}}x} + C_2e^{-\frac{r}{\sqrt{\kappa}}x}
 This lambda yields trivial solutions for the same reasons as $\lambda <0$ in the previous equation, as shown in equations (11) and (12). The only difference are the coefficients, which don't affect the validity of this particular lambda.
 \subsection*{$\lambda < 0$}~\\
 \\
-As in the case above for the previous equation, equations (6), (7), and (8) we have an oscillatory solution when $\lambda<0$. 
+As in the case above for the previous equation (when it had $\lambda >0$), equations (6), (7), and (8) we have an oscillatory solution when $\lambda<0$. 
 \begin{equation}
 F(x) = C_1\cos(\frac{r}{\sqrt{\kappa}}x) + C_2\sin(\frac{r}{\sqrt{\kappa}}x)
 \end{equation}
-As before, the cosine is dropped to satisfy the first BC. The second is very slightly different since the $\sqrt{\kappa}$ cancels:
+As before, the cosine is dropped to satisfy the first BC. The second proceeds slightly differently since the $\sqrt{\kappa}$ cancels:
 \begin{equation}
 \begin{aligned}
 F'(x) = C\frac{r}{\sqrt{\kappa}}\cos(\frac{r}{\sqrt{\kappa}}x)\\
@@ -211,4 +211,70 @@ F(x)_n = C_n\sin(\frac{\pi(2n-1)}{2L}x)
 That the $\sqrt{\kappa}$ should cancel makes sense, since it is a diffusion term affecting the time velocity, and it does \underline{not} cancel if we solve the $t$ equation, instead appearing as a damping term (if $\kappa > 0$ which it is).\\
 \\
 So to summarize the only allowable value for lambda is $\lambda < 0$, yielding the eigenfunctions in (19).
+\section*{Part 3}
+We are finding the standing wave solutions for the wave equation with friction:
+\[
+  \begin{cases}
+			u_{tt} = c^2u_{xx} - \kappa u_t ,\;  0 < x < L ,\;  t> 0 ,\;  \kappa >0\\                
+			u(0,t) = u(L,t) = 0, \;  t \geq 0
+            \end{cases}
+\]
+Using the ansatz $u(x,t) = G(t)F(x)$ and separation of variables we get 
+\begin{equation}
+\frac{G''(t) + \kappa G'(t)}{G(t)} = \frac{c^2F(x)}{F(x)} = \lambda
+\end{equation}
+which results in the two ODEs:
+\begin{equation}
+\begin{aligned}
+G''(t) + \kappa G'(t) = \lambda G(t)\\
+F''(x) = \frac{\lambda}{c^2}F(x)
+\end{aligned}
+\end{equation}
+First, we'll consider which values of $\lambda$ work. This proceeds in an identical fashion to different elements of the previous problem. $\lambda = 0$ produces trivial solutions per part 2, subsection a.). $\lambda >0$ produces an unbounded exponential solution as in equations (10), (11), and (12), with the only difference being the coefficient of $x$, which does not matter with our BC here of $F(0) = 0$. $\lambda < 0$ produces the only valid solution, which is an oscillatory solution as in equation (6). The BCs are slightly different now though:
+\begin{equation}
+\begin{aligned}
+F(x) = C_1\cos(\frac{r}{c}x) + C_2\sin(\frac{r}{c}x)\\
+F(0) = C_1\cos(0) + C_2\sin(0)= 0\\
+C_1 = 0\\
+F(L) = C\sin(\frac{r}{c}L) = 0\\
+\frac{r}{c}L = \pi n\\
+r = \frac{n\pi c}{L}\\
+F(x)_n =  C_n\sin(\frac{n\pi}{L}x) \; , \; n \in \mathbb{Z}^+
+\end{aligned}
+\end{equation} 
+Applying this lambda to the $t$ equation proceeds as follows, again noting that the only valid lambda was $\lambda < 0 = -r^2 \; , \; r \in \mathbb{R}_{>0}$. 
+\begin{equation}
+G''(t) + \kappa G'(t) - \lambda G(t)=0\\
+\end{equation}
+By characteristic polynomial we then get the roots $q$:
+\begin{equation}
+q = \frac{-\kappa \pm \sqrt{\kappa^2 + 4\lambda}}{2}
+\end{equation}
+Substituting the $r$ value we found above, we must then assume that $\kappa^2 - 4r^2 < 0$ or else we will have an exponential solution that blows up in time. Thus we have the following:
+\begin{equation}
+\begin{aligned}
+\kappa^2 - 4r^2 < 0\\
+\kappa^2 < 4r^2\\
+\kappa < 2r\\
+\kappa < \frac{2\pi c}{L}
+\end{aligned}
+\end{equation}
+With this assumption, we then pull an $i$ out from the radical, and the resulting roots take the form 
+\begin{equation}
+q = a \pm bi = \frac{-\kappa}{2} \pm i \frac{\sqrt{-\kappa^2 + 4(\frac{n\pi c}{L})^2}}{2} 
+\end{equation}
+Which results in a solution for the $t$ equation using Euler's Forumula:
+\begin{equation}
+G(t)_n = e^{\frac{-\kappa}{2}}(A\cos( \frac{\sqrt{-\kappa^2 + 4(\frac{n\pi c}{L})^2}}{2}t) + B\sin( \frac{\sqrt{-\kappa^2 + 4(\frac{n\pi c}{L})^2}}{2}t))
+\end{equation}
+Combining this with the solution to the $x$ equation above, we get the following solution:
+\begin{equation}
+\begin{aligned}
+\alpha = \frac{\sqrt{-\kappa^2 + 4(\frac{n\pi c}{L})^2}}{2}\\
+u(x,t)_n = e^{\frac{-\kappa}{2}}[A\cos( \alpha t) + B\sin( \alpha t)](\sin(\frac{n\pi c}{L}x))
+\end{aligned}
+\end{equation}
+So we see the friction applies a damping term over time, $e^{\frac{-\kappa}{2}}$, which makes sense as friction would cause the amplitude of the vibrations to get smaller over time. We can also see that the friction term slows down the frequency of oscillation over time at a constant rate of $-\kappa^2$.\\
+\\
+In response to the Bonus question, if the condition we applied to $\kappa$ isn't satisfied, you can get several other scenarios. If $\kappa = \frac{4\pi c}{L}$ there would be no imaginary part to the roots of the characteristic equation, and you would wind up with a solution of the form $G(t) = C_1e^{-\kappa} + C_2e^{-\kappa} = Ce^{-\kappa}$. Physically I believe this represents the point at which the friction would precisely overcome any oscillation in time for the first mode. As $\kappa$ grows past that point, the damping merely increases, preventing oscillation for the second, third, etc modes. As $\kappa$ increases between $\frac{2\pi c}{L}$ and  $\frac{4\pi c}{L}$ I believe you would have a scenario in which the first mode does not oscillate, and while all modes $n \geq 2$ would oscillate and decay. Then as $\frac{4\pi c}{L} \leq \kappa \leq \frac{6\pi c}{L}$ this would apply to all modes $n \geq 3$, etc. Finally, if $\kappa$ is negative, (negative friction), the equation would blow up over time, with very small negative friction growing in time with oscillation, while at some point the contribution of the negative friction to time velocity would overcome any oscillation, resulting in a similar scenario where small modes blow up with no oscillation, then as $\kappa$ gets smaller (more negative) larger and larger modes would blow up with no oscillation. This is all assuming I have this even remotely right???
 \end{document}
