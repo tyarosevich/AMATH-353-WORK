@@ -74,14 +74,14 @@ G''(t)F(x) = -F''(x)G(t)\\
 \end{aligned}
 \end{equation}
 The two equations are equal to the constant $\lambda $ because neither the RHS or LHS is in terms of its independent variable. This results in the two ODEs:
-%\begin{tcolorbox}[minipage,colback=white,arc=0pt,outer arc=0pt]
+\begin{tcolorbox}[minipage,colback=white,arc=0pt,outer arc=0pt]
 \begin{equation}
 \begin{aligned}
 G''(t) = \lambda G(t)\\
 F''(x) = - \lambda F(x)
 \end{aligned}
 \end{equation}
-%\end{tcolorbox}
+\end{tcolorbox}
 \subsection*{b.)}
 Assuming solutions of the form $u(x,t) = G(t)F(x)$ and the PDE $u_t = \kappa u_{xx}$ we get the following:
 \begin{equation}
@@ -91,24 +91,34 @@ G'(t)F(x) = \kappa F''(x)G(t)\\
 \end{aligned}
 \end{equation}
 The two equations are equal to the constant $\lambda $ as above, yielding the two ODEs:
-%\begin{tcolorbox}[minipage,colback=white,arc=0pt,outer arc=0pt]
+\begin{tcolorbox}[minipage,colback=white,arc=0pt,outer arc=0pt]
 \begin{equation}
 \begin{aligned}
 G'(t) = \lambda G(t)\\
 F''(x) = \frac{\lambda}{\kappa} F(x)
 \end{aligned}
 \end{equation}
-%\end{tcolorbox}
+\end{tcolorbox}
 \section*{Part 2}
 \subsection*{a.)}
 Starting with the equation $u_{tt} + u_{xx} = 0$ we have the following $x$ dependent ODE and three cases for $\lambda$:
 \begin{equation}
 F''(x) = -\lambda F(x)
 \end{equation}
-\subsection*{$lambda = 0$}~\newline 
+\subsection*{\underline{$\lambda = 0$}}~\newline 
 \\
-In this case we have $F''(x) = - 0 * F(x)$. Integrating twice gives $F(x) = A + Bx$. With the BC $u(0,t) = 0$ we get $F(0) = A + B(0) = 0$ and thus $A = 0$. With the other BC $u_x(L,t) = 0$ and $F'(L) = B$ we must conclude that $B=0$ as well, yielding only trivial solutions, so \underline{$\lambda = 0$ is not an allowed value.}
-\subsection*{$\lambda > 0$}~\\
+In this case we have $F''(x) = - 0 * F(x)$. Integrating twice gives $F(x) = A + Bx$. Using both boundary conditions we get the following, yielding only trivial solutions.
+\begin{equation}
+\begin{aligned}
+F(0) = A + B(0) = 0\\
+A = 0\\
+F'(x) = B\\
+F'(L) = B = 0\\
+B = 0
+\end{aligned}
+\end{equation}
+Thus \underline{$\lambda = 0$ is not an allowed value.}
+\subsection*{\underline{$\lambda > 0$}}~\\
 \\
 In this case we have $F''(x) = -\lambda F(x)$ where $\lambda$ is a positive real number. Let $\lambda = r^2$, with $r \in \mathbb{R}_{>0}$. Then by characteristic polynomial we get following, per Euler's Formula:
 \begin{equation}
@@ -133,10 +143,12 @@ F'(L) = C_2r\cos(rL) = 0
 \end{aligned}
 \end{equation}
 Because $\cos(x) = 0$ at odd multiples of $\frac{\pi}{2}$ it follows that to satisfy the second BC without setting $C_2 = 0$ that we must have the argument of cosine, $rL = \frac{\pi(2n-1)}{2}$ where $n > 0$ is a positive integer. Thus with positive eigenvalues $\lambda$ we have the eigenfunctions:
+\begin{tcolorbox}[minipage,colback=white,arc=0pt,outer arc=0pt]
 \begin{equation}
 F_n(x) = C_n\sin(\frac{\pi(2n-1)x}{2L} \text{ , } n \in \mathbb{Z}^+
 \end{equation}
-\subsection*{$\lambda < 0$}~\\
+\end{tcolorbox}
+\subsection*{\underline{$\lambda < 0$}}~\\
 \\
 In the same fashion as above, but now let $\lambda = -r^2$, $r \in \mathbb{R}_{>0}$. From characteristic polynomial we then get:
 \begin{equation}
@@ -151,15 +163,14 @@ C_2 = - C_1\\
 F(x) = C(e^{rx} - e^{-rx})
 \end{aligned}
 \end{equation}
-Then applying this to the second BC:
+This is equivalent to $2C\sinh(rx)$. Applying this to the second BC:
 \begin{equation}
 \begin{aligned}
-F'(x) = C(re^{rx} + re^{-rx})\\
-F'(L) = C(re^{rL} + re^{-rL}) = 0\\
-e^{rL} = -e^{-rL}
+F'(x) = 2rC\cosh(rx)\\
+F'(L) = 2rC\cosh(rL) = 0\\
 \end{aligned}
 \end{equation}
-Since there is no possibility of $e^{rL} = -e^{-rL}$, this means the only way to satisfy the BCs with $\lambda < 0$ is to have $C = 0$, yielding a trivial solution. Thus \underline{$\lambda < 0$ is not an allowed value.}
+Since $\cosh(z)$ is never equal to zero, the second constant must also be zero, resulting in a trivial solution. Thus \underline{$\lambda < 0$ is not an allowed value.}
 \subsection*{b.)}
 We now consider the same possible values for $\lambda$ for the second equation from above, and the ODE for $x$:
 \begin{equation}
@@ -168,14 +179,14 @@ u_t = \kappa u_{xx}\\
 F''(x) = \frac{\lambda}{\kappa} F(x)
 \end{aligned}
 \end{equation}
-\subsection*{$\lambda = 0$}~\\
+\subsection*{\underline{$\lambda = 0$}}~\\
 \\
 Similarly to the previous equation, setting $\lambda = 0$ and integrating twice gives us
 \begin{equation}
 F(x) = A + Bx
 \end{equation}
 which gives only trivial solutions in a manner identical to above, Part 2, subsection a.).
-\subsection*{$\lambda > 0$}~\\
+\subsection*{\underline{$\lambda > 0$}}~\\
 \\
 As above we'll let $\lambda = r^2$ with $r \in \mathbb{R}_{>0}$ giving:
 \begin{equation}
@@ -188,8 +199,8 @@ As above, by ansatz this results in
 \begin{equation}
 F(x) = C_1e^{\frac{r}{\sqrt{\kappa}}x} + C_2e^{-\frac{r}{\sqrt{\kappa}}x}
 \end{equation}
-This lambda yields trivial solutions for the same reasons as $\lambda <0$ in the previous equation, as shown in equations (11) and (12). The only difference are the coefficients, which don't affect the validity of this particular lambda.
-\subsection*{$\lambda < 0$}~\\
+This lambda yields trivial solutions for the same reasons as $\lambda <0$ in the previous equation, as shown in equations (11), (12) and (13). The only difference are the coefficients, which don't affect the validity of this particular lambda. \underline{$\lambda > 0$ is not an allowed value.}
+\subsection*{\underline{$\lambda < 0$}}~\\
 \\
 As in the case above for the previous equation (when it had $\lambda >0$), equations (6), (7), and (8) we have an oscillatory solution when $\lambda<0$. 
 \begin{equation}
@@ -205,9 +216,11 @@ r = \frac{\pi\sqrt{\kappa}(2n-1)}{2L}
 \end{aligned}
 \end{equation}
 When we plug this r value back into $F(x)$, the $\kappa$ value cancels giving:
+\begin{tcolorbox}[minipage,colback=white,arc=0pt,outer arc=0pt]
 \begin{equation}
 F(x)_n = C_n\sin(\frac{\pi(2n-1)}{2L}x)
 \end{equation}
+\end{tcolorbox}
 That the $\sqrt{\kappa}$ should cancel makes sense, since it is a diffusion term affecting the time velocity, and it does \underline{not} cancel if we solve the $t$ equation, instead appearing as a damping term (if $\kappa > 0$ which it is).\\
 \\
 So to summarize the only allowable value for lambda is $\lambda < 0$, yielding the eigenfunctions in (19).
@@ -230,7 +243,7 @@ G''(t) + \kappa G'(t) = \lambda G(t)\\
 F''(x) = \frac{\lambda}{c^2}F(x)
 \end{aligned}
 \end{equation}
-First, we'll consider which values of $\lambda$ work. This proceeds in an identical fashion to different elements of the previous problem. $\lambda = 0$ produces trivial solutions per part 2, subsection a.). $\lambda >0$ produces an unbounded exponential solution as in equations (10), (11), and (12), with the only difference being the coefficient of $x$, which does not matter with our BC here of $F(0) = 0$. $\lambda < 0$ produces the only valid solution, which is an oscillatory solution as in equation (6). The BCs are slightly different now though:
+First, we'll consider which values of $\lambda$ work. This proceeds in an identical fashion to different elements of the previous problem. $\lambda = 0$ produces trivial solutions in an identical manner to (6) above, since the difference in sign does not matter as it's multiplied by zero. $\lambda >0$ produces an unbounded exponential solution as in equations (11), (12), and (13), with the only difference being the coefficient of $x$, which does not matter with our BC here of $F(0) = 0$. $\lambda < 0$ produces the only valid solution, which is an oscillatory solution as in equations (7) and (8). The BCs are slightly different now though:
 \begin{equation}
 \begin{aligned}
 F(x) = C_1\cos(\frac{r}{c}x) + C_2\sin(\frac{r}{c}x)\\
@@ -268,13 +281,22 @@ Which results in a solution for the $t$ equation using Euler's Forumula:
 G(t)_n = e^{\frac{-\kappa}{2}}(A\cos( \frac{\sqrt{-\kappa^2 + 4(\frac{n\pi c}{L})^2}}{2}t) + B\sin( \frac{\sqrt{-\kappa^2 + 4(\frac{n\pi c}{L})^2}}{2}t))
 \end{equation}
 Combining this with the solution to the $x$ equation above, we get the following solution:
+\begin{tcolorbox}[minipage,colback=white,arc=0pt,outer arc=0pt]
 \begin{equation}
 \begin{aligned}
 \alpha = \frac{\sqrt{-\kappa^2 + 4(\frac{n\pi c}{L})^2}}{2}\\
 u(x,t)_n = e^{\frac{-\kappa}{2}}[A\cos( \alpha t) + B\sin( \alpha t)](\sin(\frac{n\pi c}{L}x))
 \end{aligned}
 \end{equation}
+\end{tcolorbox}
 So we see the friction applies a damping term over time, $e^{\frac{-\kappa}{2}}$, which makes sense as friction would cause the amplitude of the vibrations to get smaller over time. We can also see that the friction term slows down the frequency of oscillation over time at a constant rate of $-\kappa^2$.\\
 \\
-In response to the Bonus question, if the condition we applied to $\kappa$ isn't satisfied, you can get several other scenarios. If $\kappa = \frac{4\pi c}{L}$ there would be no imaginary part to the roots of the characteristic equation, and you would wind up with a solution of the form $G(t) = C_1e^{-\kappa} + C_2e^{-\kappa} = Ce^{-\kappa}$. Physically I believe this represents the point at which the friction would precisely overcome any oscillation in time for the first mode. As $\kappa$ grows past that point, the damping merely increases, preventing oscillation for the second, third, etc modes. As $\kappa$ increases between $\frac{2\pi c}{L}$ and  $\frac{4\pi c}{L}$ I believe you would have a scenario in which the first mode does not oscillate, and while all modes $n \geq 2$ would oscillate and decay. Then as $\frac{4\pi c}{L} \leq \kappa \leq \frac{6\pi c}{L}$ this would apply to all modes $n \geq 3$, etc. This makes sense as, for each mode, as the contribution of $\kappa u_t$ becomes greater than $u_{xx}$, it would cancel, and then reverse, the acceleration in time. Higher modes would have greater concavity, thus greater $u_{xx}$ terms, which is why it takes progressively larger and larger $\kappa$ to cancel the oscillations for larger modes. A similar but inverse phenomenon happens with negative friction. This is all assuming I have this even remotely right???
+In response to the Bonus question, if the condition we applied to $\kappa$ isn't satisfied, you can get several other scenarios. If $\kappa = \frac{4\pi c}{L}$ there would be no imaginary part to the roots of the characteristic equation for the first mode, and repeated roots. I think this is the critically damped case, in which it would decay asymptotically to zero. Then, as $\kappa$ increases you get rapid decay because the following constraint is always true:
+\begin{equation}
+\kappa > \sqrt{\kappa^2 - r^2}
+\end{equation}
+\\
+In this case, the characteristic polynomial roots would both be negative, and you would wind up with a solution of the form $G(t) = C_1e^{-\kappa} + C_2e^{-\kappa} = Ce^{-\kappa}$. This is the overdamped example. As $\kappa$ grows past that point, the damping merely increases, preventing oscillation for the second, third, etc modes. As $\kappa$ increases between $\frac{2\pi c}{L}$ and  $\frac{4\pi c}{L}$ I believe you would have a scenario in which the first mode does not oscillate, and while all modes $n > 2$ would oscillate and decay. Then as $\frac{4\pi c}{L} \leq \kappa \leq \frac{6\pi c}{L}$ this would apply to all modes $n \geq 3$, etc. \\
+\\
+This makes sense since as, for each mode, the contribution of $\kappa u_t$ becomes greater than $u_{xx}$, it would cancel, and then reverse, the acceleration in time. Higher modes would have greater concavity, thus greater $u_{xx}$ terms, which is why it takes progressively larger and larger $\kappa$ to cancel the oscillations for larger modes. A similar but inverse phenomenon happens with negative friction. This is all assuming I have this even remotely right???
 \end{document}

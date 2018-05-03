@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.5)  2 MAY 2018 15:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.5)  2 MAY 2018 17:28
 entering extended mode
 **./yarosevich_hw_8.tex
 (yarosevich_hw_8.tex
@@ -1241,54 +1241,58 @@ Underfull \hbox (badness 10000) in paragraph at lines 108--111
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--114
+Underfull \hbox (badness 10000) in paragraph at lines 121--124
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--142
+Underfull \hbox (badness 10000) in paragraph at lines 151--154
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 171--174
+Underfull \hbox (badness 10000) in paragraph at lines 182--185
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 178--181
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 192--195
+Underfull \hbox (badness 10000) in paragraph at lines 189--192
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 210--214
+Underfull \hbox (badness 10000) in paragraph at lines 203--206
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 224--227
 
  []
 
 [4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 292--295
+
+ []
+
 
 Package caption Warning: Unused \captionsetup[lstlisting] on input line 24.
 See the caption package documentation for explanation.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 276--280
+Underfull \hbox (badness 10000) in paragraph at lines 297--302
 
  []
 
 [6] (yarosevich_hw_8.aux) ) 
 Here is how much of TeX's memory you used:
- 31166 strings out of 493312
- 671217 string characters out of 3136295
+ 31199 strings out of 493312
+ 672025 string characters out of 3136295
  710818 words of memory out of 3000000
- 34275 multiletter control sequences out of 15000+200000
+ 34308 multiletter control sequences out of 15000+200000
  540949 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,9n,101p,10428b,275s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,12n,101p,10428b,421s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
 amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/a
@@ -1305,7 +1309,7 @@ rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Pro
 gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program F
 iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on yarosevich_hw_8.pdf (6 pages, 188600 bytes).
+Output written on yarosevich_hw_8.pdf (6 pages, 187407 bytes).
 PDF statistics:
  124 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
