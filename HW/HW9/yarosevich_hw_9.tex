@@ -65,12 +65,13 @@ Instructor: Jeremy Upsal % Instructor/supervisor
 %	SECTION 1
 %----------------------------------------------------------------------------------------
 \section*{Part 1}
+\subsection*{a.)}
 We are asked to compute the integral $\int_a^b x\cos(\frac{n\pi x}{2})$. I will also show my work here for $\int_a^b (2-x)\cos(\frac{n\pi x}{2})$ as this is how I computed the $a_n$ term later on. Starting with the first one, using division by parts we have:
 \begin{equation}
 \begin{aligned}
 \int x\cos(\frac{n\pi x}{2}) = \int udv\\
 u = x \; , \; du = dx\\
-dv = \cos(\frac{n\pi x}{2})\\
+dv = \cos(\frac{n\pi x}{2})dx\\
 v = \int dv = \frac{2}{n\pi}\sin(\frac{n\pi x}{2})\\
 \int udv = uv - \int vdu = \frac{2x}{n\pi}\sin(\frac{n\pi x}{2}) + \frac{4}{n^2\pi^2}\cos(\frac{n\pi x}{2})
 \end{aligned}
@@ -81,7 +82,64 @@ v = \int dv = \frac{2}{n\pi}\sin(\frac{n\pi x}{2})\\
 And now the same for $\int_a^b (2-x)\cos(\frac{n\pi x}{2})$. Note that I did the definite integral directly here, unlike the previous equation.
 \begin{equation}
 \begin{aligned}
-
+\int_a^b (2-x)cos(\frac{n\pi x}{2}) = \int_a^b udv\\
+u = 2-x  \; , \; du = -dx\\
+dv = cos(\frac{n\pi x}{2})dx\\
+v = \int dv = \frac{2}{n\pi}\sin(\frac{n\pi x}{2})\\
+\int vdu = \frac{4}{n^2\pi^2}\cos(\frac{n\pi x}{2})
 \end{aligned}
 \end{equation}
+\begin{multline}
+uv\Big|_a^b - \int_a^b vdu = \\ (2-b)\frac{2}{n\pi}\sin(\frac{n\pi b}{2}) - (2-a)\frac{2}{n\pi}\sin(\frac{n\pi a}{2}) - \frac{4}{n^2\pi^2}\cos(\frac{n\pi b}{2}) + \frac{4}{n^2\pi^2}\cos(\frac{n\pi a}{2})
+\end{multline}
+\subsection*{b.)}
+\begin{equation}
+b_n = \frac{1}{2} \int_{-2}^2 f_e(x)\sin(\frac{n\pi x}{2})dx
+\end{equation}
+Because $f_e(x)$ is defined as the even extension of $f(x)$, and because sine is an odd function, their product is odd. Any integral of an odd function across a symmetrical domain including the origin is equal to zero, and thus $b_n = 0$.
+\subsection*{c.)}
+To find $a_0$ I use the following equation:
+\begin{equation}
+\frac{a_0}{2} = A = \frac{1}{4}\int_{-2}^2 f_e(x)x
+\end{equation}
+Because $f_e(x)$ is defined as the even extension of $f(x)$, and because the resulting domain is defined equivalently in both $f_e(x)$ and $f(x)$, we get the following:
+\begin{equation}
+\frac{a_0}{2} = A = \frac{1}{4}\int_{-2}^2 f_e(x)x = 2(\frac{1}{4})\int_0^2 f_e(x)dx = \frac{1}{2}\int_0^2f(x)dx
+\end{equation}
+This definite integral is then evaluated for the piece-wise function with an integration constant of 0.
+\begin{equation}
+\begin{aligned}
+A = \frac{1}{2}\Big[(\frac{1}{2}x^2) \Big|_0^1 + (2x-\frac{1}{2}x^2)\Big|_1^2\Big]\\
+A = \frac{1}{2}\\
+a_0 = 2A = 1
+\end{aligned}
+\end{equation}
+\subsection*{d.)}
+To find $a_n$ we use the following equation:
+\begin{equation}
+a_n = \frac{1}{2} \int_{-2}^2 f_e(x)\cos(\frac{n\pi x}{2})dx
+\end{equation}
+Taking note that the product of two even functions, $f_e(x)$ and $cosine$, is also an even function, and that the resulting domain is equivalent in both $f_e(x)$ and $f(x)$ we get the following:
+\begin{equation}
+a_n = \frac{1}{2} \int_{-2}^2 f_e(x)\cos(\frac{n\pi x}{2})dx = 2\frac{1}{2} \int_0^2 f_e(x)\cos(\frac{n\pi x}{2})dx = \int_0^2 f(x)\cos(\frac{n\pi x}{2})dx
+\end{equation}
+Because $f(x)$ is a piecewise function (shown below), the integral in this domain is defined as follows:
+\[f(x)=
+  \begin{cases}
+			x, \; \; \; 0<x\leq 1, \\
+			2-x, \; \; \; 1 < x \leq 2
+            \end{cases}
+\]
+\begin{equation}
+ \int_0^2 f(x)\cos(\frac{n\pi x}{2})dx = \int_0^1 x\cos(\frac{n\pi x}{2})dx + \int_1^2 (2-x)cos(\frac{n\pi x}{2})dx
+\end{equation}
+Then plugging this into the results of part a.), equations (2) and (4) above, we have the following:
+\begin{multline}
+a_n = \\ \Big[ \frac{2}{n\pi}\sin(\frac{n\pi}{2}) + \frac{4}{n^2\pi^2}\cos(\frac{n\pi}{2}) - 0 - \frac{4}{n^2\pi^2}\cos(0) \Big] \\ + \Big[ 0 - (1)(\frac{2}{n\pi}\sin(\frac{n\pi}{2}) - \frac{4}{n^2\pi^2}\cos(n\pi) + \frac{4}{n^2\pi^2}\cos(\frac{n\pi}{2}) \Big]
+\end{multline}
+By carrying out the addition and subtraction of sine/cosine terms with the same arguments, and using the equivalence $cos(n\pi) = (-1)^2$ we get:
+\begin{equation}
+a_n = \frac{8\cos(\frac{n\pi}{2}) - 4(-1)^n - 4}{n^2\pi^2}
+\end{equation}
+bla
 \end{document}
