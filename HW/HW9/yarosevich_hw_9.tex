@@ -1,0 +1,87 @@
+\documentclass{article}
+
+\usepackage{siunitx} % Provides the \SI{}{} and \si{} command for typesetting SI units
+\usepackage{graphicx} % Required for the inclusion of images
+\usepackage{amsmath} % Required for some math elements 
+\usepackage[export]{adjustbox} % loads also graphicx
+\usepackage{listings}
+\usepackage{matlab-prettifier}
+\usepackage{float}
+\usepackage[most]{tcolorbox}
+\usepackage{amsfonts}
+
+\usepackage{titlesec}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\newcommand{\R}{\mathbb{R}}
+
+\usepackage{xcolor}
+
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{%
+  \parbox{\textwidth}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}\vskip-4pt}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\lstset{frame=lrb,xleftmargin=\fboxsep,xrightmargin=-\fboxsep}
+\titleformat{\section}[runin]
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}[runin]
+  {\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+
+%\usepackage{times} % Uncomment to use the Times New Roman font
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{AMATH 353: Homework 8 \\Due May, 2 2018 \\ ID: 1064712} % Title
+
+\author{Trent \textsc{Yarosevich}} % Author name
+
+\date{\today} % Date for the report
+
+\begin{document}
+\maketitle % Insert the title, author and date
+\setlength\parindent{1cm}
+
+\begin{center}
+\begin{tabular}{l r}
+%Date Performed: December 1, 2017 \\ % Date the experiment was performed
+Instructor: Jeremy Upsal % Instructor/supervisor
+\end{tabular}
+\end{center}
+
+% If you wish to include an abstract, uncomment the lines below
+% \begin{abstract}
+% Abstract text
+% \end{abstract}
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+\section*{Part 1}
+We are asked to compute the integral $\int_a^b x\cos(\frac{n\pi x}{2})$. I will also show my work here for $\int_a^b (2-x)\cos(\frac{n\pi x}{2})$ as this is how I computed the $a_n$ term later on. Starting with the first one, using division by parts we have:
+\begin{equation}
+\begin{aligned}
+\int x\cos(\frac{n\pi x}{2}) = \int udv\\
+u = x \; , \; du = dx\\
+dv = \cos(\frac{n\pi x}{2})\\
+v = \int dv = \frac{2}{n\pi}\sin(\frac{n\pi x}{2})\\
+\int udv = uv - \int vdu = \frac{2x}{n\pi}\sin(\frac{n\pi x}{2}) + \frac{4}{n^2\pi^2}\cos(\frac{n\pi x}{2})
+\end{aligned}
+\end{equation}
+\begin{multline}
+\int_a^b x\cos(\frac{n\pi x}{2}) = \\ \frac{2b}{n\pi}\sin(\frac{n\pi b}{2}) + \frac{4}{n^2\pi^2}\cos(\frac{n\pi b}{2}) - \frac{2a}{n\pi}\sin(\frac{n\pi a}{2}) - \frac{4}{n^2\pi^2}\cos(\frac{n\pi a}{2})
+\end{multline}
+And now the same for $\int_a^b (2-x)\cos(\frac{n\pi x}{2})$. Note that I did the definite integral directly here, unlike the previous equation.
+\begin{equation}
+\begin{aligned}
+
+\end{aligned}
+\end{equation}
+\end{document}
