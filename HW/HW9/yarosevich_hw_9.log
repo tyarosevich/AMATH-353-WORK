@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6500) (preloaded format=xelatex 2018.5.4)  4 MAY 2018 21:26
+This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6500) (preloaded format=xelatex 2018.5.4)  6 MAY 2018 17:41
 entering extended mode
 **./yarosevich_hw_9.tex
 (yarosevich_hw_9.tex
@@ -1211,13 +1211,15 @@ m/n/10 ) []([])\OML/cmm/m/it/10 dx \OT1/cmr/m/n/10 = [][] \OML/cmm/m/it/10 f\OT
 1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) []([])\OML/cmm/m/it/10 dx
  []
 
+[3]
 File: hw_9_plots.pdf Graphic file (type pdf)
 <use hw_9_plots.pdf>
+
 
 Package caption Warning: Unused \captionsetup[lstlisting] on input line 24.
 See the caption package documentation for explanation.
 
-[3] [4] (yarosevich_hw_9.aux) ) 
+[4] (yarosevich_hw_9.aux) ) 
 Here is how much of TeX's memory you used:
  30213 strings out of 427839
  645316 string characters out of 3151405
