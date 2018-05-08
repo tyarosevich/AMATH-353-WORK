@@ -1,0 +1,138 @@
+\documentclass{article}
+
+\usepackage{siunitx} % Provides the \SI{}{} and \si{} command for typesetting SI units
+\usepackage{graphicx} % Required for the inclusion of images
+\usepackage{amsmath} % Required for some math elements 
+\usepackage[export]{adjustbox} % loads also graphicx
+\usepackage{listings}
+\usepackage{matlab-prettifier}
+\usepackage{float}
+\usepackage[most]{tcolorbox}
+\usepackage{amsfonts}
+\usepackage{color}
+\usepackage{titlesec}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\newcommand{\R}{\mathbb{R}}
+
+\usepackage{xcolor}
+
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{%
+  \parbox{\textwidth}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}\vskip-4pt}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\lstset{frame=lrb,xleftmargin=\fboxsep,xrightmargin=-\fboxsep}
+\titleformat{\section}[runin]
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}[runin]
+  {\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+
+%\usepackage{times} % Uncomment to use the Times New Roman font
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{AMATH 353: Homework 10 \\Due May, 8 2018 \\ ID: 1064712} % Title
+
+\author{Trent \textsc{Yarosevich}} % Author name
+
+\date{\today} % Date for the report
+
+\begin{document}
+\maketitle % Insert the title, author and date
+\setlength\parindent{1cm}
+
+\begin{center}
+\begin{tabular}{l r}
+%Date Performed: December 1, 2017 \\ % Date the experiment was performed
+Instructor: Jeremy Upsal % Instructor/supervisor
+\end{tabular}
+\end{center}
+
+% If you wish to include an abstract, uncomment the lines below
+% \begin{abstract}
+% Abstract text
+% \end{abstract}
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+\section*{Part 1}
+We consider the heat equation and the following IBVP:
+\begin{align*}
+&u_t=4u_{xx} & 0<&x<1, & t&> 0\\
+&u(0, t)= u_x(1, t) = 0 && & t&> 0\\
+&u(x,0)= x(1-x). && &&
+\end{align*}
+I've used separation of variables in the same fashion as I did in HW 8, which is to say I put the $k$ term with the $x$ equation. Using $k = 4$ this results in:
+\begin{equation}
+\begin{aligned}
+G'(t) = \lambda G(t)\\
+F''(x) = \frac{\lambda}{4}F(x)
+\end{aligned}
+\end{equation}
+As in HW 8, the only allowed $\lambda$ values with this setup were $\lambda < 0$, which resulted in the following using the characteristic polynomial and Euler's Formula, and $\lambda = -r^2, r \in \mathbb{R}^+$:
+\begin{equation}
+F(x) = C_1\cos(\frac{r}{2}x) + C_2\sin(\frac{r}{2}x)
+\end{equation}
+We then apply the BCs to this:
+\begin{equation}
+\begin{aligned}
+F(0) = C_1\cos(0) + C_2\sin(0) = 0\\
+C_1 = 0\\
+F'(x) = \frac{r}{2}C_2\cos(\frac{r}{2}x)\\
+F'(1) = \frac{r}{2}C_2\cos(\frac{r}{2}) = 0
+\end{aligned}
+\end{equation}
+Thus without setting $C_2 = 0$ the BC is only satisfied when $\cos(\frac{r}{2}) = 0$, which means the argument is equal to odd integer multiples of $\frac{\pi}{2}$:
+\begin{equation}
+\begin{aligned}
+n \in \mathbb{Z}^+\\
+\frac{r}{2} = \frac{\pi (2n-1)}{2}\\
+r = \pi (2n-1)\\
+\lambda_n = - ( \pi(2n-1))^2\\
+F_n(x) = C_2\sin(\frac{\pi(2n-1)}{2}x)
+\end{aligned}
+\end{equation}
+Turning to the equation $G'(t) = \lambda G(t)$, we can simply solve with separation of variables (ODE 101 version):
+\begin{equation}
+\begin{aligned}
+\int \frac{dG}{dt} = \int \lambda G(t)\\
+ln(G(t)) = \lambda t + C\\
+G(t) = Ae^{\lambda t}
+\end{aligned}
+\end{equation}
+Combining the above with the result in equation (4) and substituting $\lambda_n$, we get a solution for $u$, and note I have consolidated the product of the arbitrary constants in a single new arbitrary constant. Consequently, we can also use superposition to rewrite the equation as a sum of solutions.
+\begin{tcolorbox}[minipage,colback=white,arc=0pt,outer arc=0pt]
+\begin{equation}
+\begin{aligned}
+u_n(x, t) = Ae^{\lambda_n t}\sin(\frac{\pi(2n-1)}{2}x)\\
+u(x, t) = \sum_{n=1}^{\infty} A_ne^{\lambda_n t}\sin(\frac{\pi(2n-1)}{2}x)
+\end{aligned}
+\end{equation}
+\end{tcolorbox}
+We now have to match this form to the initial condition $u(x, 0) = x(1-x)$, which gives us the following equation. Let this IC be $f(x)$:
+\begin{equation}
+\begin{aligned}
+u(x, 0) = \sum_{n=1}^{\infty} A_ne^{\lambda_n (0)}\sin(\frac{\pi(2n-1)}{2}x) = f(x)\\ 
+f(x) = \sum_{n=1}^{\infty} A_n\sin(\frac{\pi(2n-1)}{2}x)
+\end{aligned}
+\end{equation}
+This gives us the Fourier Series form of the initial condition. Because we need to make use of the orthogonality relations, and $f(x)$ is only defined from $x \in [0, 1]$, we will use the odd extension of $f(x)$ because the BCs specify a fixed point at the origin. And indeed, using the even extension in this situation just results in a $0$ constant anyway.\\
+\\
+We define the odd extension as follows:
+\[f_o(x)=
+  \begin{cases}
+			f(x), \; \; \; x \geq 0 \\
+			-f(-x), \; \; \; x < 0
+            \end{cases}
+\]
+bla
+\end{document}
