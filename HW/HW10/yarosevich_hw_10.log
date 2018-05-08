@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.5)  8 MAY 2018 14:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.5)  8 MAY 2018 15:49
 entering extended mode
 **./yarosevich_hw_10.tex
 (yarosevich_hw_10.tex
@@ -1240,16 +1240,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 127--131
 
  []
 
-[2]
+[2] [3]
+Overfull \hbox (51.02847pt too wide) detected at line 178
+\OML/cmm/m/it/10 A[] \OT1/cmr/m/n/10 = [][][][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 186--189
+
+ []
+
 
 Package caption Warning: Unused \captionsetup[lstlisting] on input line 24.
 See the caption package documentation for explanation.
 
-[3] (yarosevich_hw_10.aux) ) 
+[4] (yarosevich_hw_10.aux) ) 
 Here is how much of TeX's memory you used:
  31187 strings out of 493312
  671802 string characters out of 3136295
- 710824 words of memory out of 3000000
+ 711824 words of memory out of 3000000
  34296 multiletter control sequences out of 15000+200000
  540642 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1268,9 +1277,9 @@ b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 
-Output written on yarosevich_hw_10.pdf (3 pages, 144056 bytes).
+Output written on yarosevich_hw_10.pdf (4 pages, 150757 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
+ 106 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  157 words of extra memory for PDF output out of 10000 (max. 10000000)
 
