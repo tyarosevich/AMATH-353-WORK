@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.5)  8 MAY 2018 15:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.5)  8 MAY 2018 17:12
 entering extended mode
 **./yarosevich_hw_10.tex
 (yarosevich_hw_10.tex
@@ -1236,50 +1236,106 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [1
 
 {C:/Users/zennsunni/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 127--131
+Underfull \hbox (badness 10000) in paragraph at lines 131--135
 
  []
 
 [2] [3]
-Overfull \hbox (51.02847pt too wide) detected at line 178
+Overfull \hbox (51.02847pt too wide) detected at line 182
 \OML/cmm/m/it/10 A[] \OT1/cmr/m/n/10 = [][][][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 186--189
+Underfull \hbox (badness 10000) in paragraph at lines 190--201
 
  []
+
+[4]
+<part2_plot.pdf, id=66, pagebox=cropbox, 473.77pt x 299.1175pt>
+File: part2_plot.pdf Graphic file (type pdf)
+<use part2_plot.pdf>
+Package pdftex.def Info: part2_plot.pdf  used on input line 208. on input line 
+208.
+Package pdftex.def Info: Requested size: 345.0pt x 217.82451pt on input line 20
+8.
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--210
+
+ []
+
+[5 <./part2_plot.pdf>] [6]
+<part3_plot1.pdf, id=85, pagebox=cropbox, 403.5075pt x 223.83624pt>
+File: part3_plot1.pdf Graphic file (type pdf)
+<use part3_plot1.pdf>
+Package pdftex.def Info: part3_plot1.pdf  used on input line 276. on input line
+ 276.
+Package pdftex.def Info: Requested size: 169.0519pt x 93.77832pt on input line 
+276.
+<part3_plot2.pdf, id=86, pagebox=cropbox, 403.5075pt x 223.83624pt>
+File: part3_plot2.pdf Graphic file (type pdf)
+<use part3_plot2.pdf>
+Package pdftex.def Info: part3_plot2.pdf  used on input line 282. on input line
+ 282.
+Package pdftex.def Info: Requested size: 169.0519pt x 93.77832pt on input line 
+282.
+<part3_plot3.pdf, id=87, pagebox=cropbox, 403.5075pt x 223.83624pt>
+File: part3_plot3.pdf Graphic file (type pdf)
+<use part3_plot3.pdf>
+Package pdftex.def Info: part3_plot3.pdf  used on input line 288. on input line
+ 288.
+Package pdftex.def Info: Requested size: 169.0519pt x 93.77832pt on input line 
+288.
+<part3_plot4.pdf, id=88, pagebox=cropbox, 403.5075pt x 223.83624pt>
+File: part3_plot4.pdf Graphic file (type pdf)
+<use part3_plot4.pdf>
+Package pdftex.def Info: part3_plot4.pdf  used on input line 294. on input line
+ 294.
+Package pdftex.def Info: Requested size: 169.0519pt x 93.77832pt on input line 
+294.
 
 
 Package caption Warning: Unused \captionsetup[lstlisting] on input line 24.
 See the caption package documentation for explanation.
 
-[4] (yarosevich_hw_10.aux) ) 
-Here is how much of TeX's memory you used:
- 31187 strings out of 493312
- 671802 string characters out of 3136295
- 711824 words of memory out of 3000000
- 34296 multiletter control sequences out of 15000+200000
- 540642 words of font info for 64 fonts, out of 3000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 63i,10n,101p,10429b,421s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmmi5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr1
-7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pf
-b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:
-/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+[7 <./part3_plot1.pdf> <./part3_plot2.pdf
 
-Output written on yarosevich_hw_10.pdf (4 pages, 150757 bytes).
+pdfTeX warning: pdflatex (file ./part3_plot2.pdf): PDF inclusion: multiple pdfs
+ with page group included in a single page
+> <./part3_plot3.pdf
+
+pdfTeX warning: pdflatex (file ./part3_plot3.pdf): PDF inclusion: multiple pdfs
+ with page group included in a single page
+> <./part3_plot4.pdf
+
+pdfTeX warning: pdflatex (file ./part3_plot4.pdf): PDF inclusion: multiple pdfs
+ with page group included in a single page
+>] (yarosevich_hw_10.aux) ) 
+Here is how much of TeX's memory you used:
+ 31226 strings out of 493312
+ 672577 string characters out of 3136295
+ 711824 words of memory out of 3000000
+ 34329 multiletter control sequences out of 15000+200000
+ 540988 words of font info for 65 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 63i,11n,101p,10429b,600s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmmi5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+r12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17
+.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb
+><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on yarosevich_hw_10.pdf (7 pages, 430890 bytes).
 PDF statistics:
- 106 PDF objects out of 1000 (max. 8388607)
+ 193 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 157 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 182 words of extra memory for PDF output out of 10000 (max. 10000000)
 
