@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.5)  14 MAY 2018 15:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.5)  14 MAY 2018 17:19
 entering extended mode
 **./yarosevich_hw_11.tex
 (yarosevich_hw_11.tex
@@ -1241,33 +1241,35 @@ Package pdftex.def Info: Requested size: 345.0pt x 169.54167pt on input line 75
 .
  [1
 
-{C:/Users/zennsunni/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{C:/Users/zennsunni/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2 <./p
+lot1.pdf>]
 
 Package caption Warning: Unused \captionsetup[lstlisting] on input line 24.
 See the caption package documentation for explanation.
 
-[2 <./plot1.pdf>] (yarosevich_hw_11.aux) ) 
+[3] (yarosevich_hw_11.aux) ) 
 Here is how much of TeX's memory you used:
- 31176 strings out of 493312
- 671370 string characters out of 3136295
- 707824 words of memory out of 3000000
- 34284 multiletter control sequences out of 15000+200000
+ 31200 strings out of 493312
+ 671991 string characters out of 3136295
+ 709824 words of memory out of 3000000
+ 34308 multiletter control sequences out of 15000+200000
  540642 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,7n,101p,10429b,530s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmsy10.pfb>
-Output written on yarosevich_hw_11.pdf (2 pages, 128166 bytes).
+ 63i,11n,101p,10429b,530s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7
+.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb>
+Output written on yarosevich_hw_11.pdf (3 pages, 138090 bytes).
 PDF statistics:
- 93 PDF objects out of 1000 (max. 8388607)
+ 100 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  162 words of extra memory for PDF output out of 10000 (max. 10000000)
 

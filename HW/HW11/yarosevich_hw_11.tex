@@ -79,16 +79,36 @@ This way of modeling differs from the linear relationship in that the traffic ve
 
 The resulting flux equation and conservation law with this relation are as follows:
 \begin{equation}
+u_t + \phi_x = 0\\
+\end{equation}
+\begin{tcolorbox}[minipage,colback=white,arc=0pt,outer arc=0pt]
+\begin{equation}
+\phi = \kappa u  \log(\frac{u_1}{u})
+\end{equation}
+\end{tcolorbox}
+\begin{equation}
 \begin{aligned}
-\phi = u \kappa ln(\frac{u_1}{u})\\
-\phi_x = \kappa(u_x ln(\frac{u_1}{u}) - \frac{u^2}{u_1})\\
-u_t +  \kappa(u_x ln(\frac{u_1}{u}) - \frac{u^2}{u_1}) = 0
+\phi_x = \kappa\frac{d}{dx}(u\log(\frac{u_1}{u})\\
+\frac{d}{dx}(u\log(\frac{u_1}{u}) = u_x\log(\frac{u_1}{u}) + u\frac{d}{dx}(\log(\frac{u_1}{u}))\\
+\frac{d}{dx}\log(\frac{u_1}{u}) = \frac{u}{u_1}\frac{d}{dx}(\frac{u_1}{u})\\
+\frac{d}{dx}(\frac{u_1}{u}) = \frac{-u_1}{u^2}u_x\\
+\phi_x = \kappa \Big( u_x\log(\frac{u_1}{u}) + u (\frac{u}{u_1})(\frac{-u_1u_x}{u^2})\Big) \\
+\phi_x = \kappa \Big( u_x\log(\frac{u_1}{u}) - u_x \Big)
 \end{aligned}
 \end{equation}
+And finally:
+\begin{tcolorbox}[minipage,colback=white,arc=0pt,outer arc=0pt]
+\begin{equation}
+u_t + \kappa \Big( u_x\log(\frac{u_1}{u}) - u_x \Big) = 0
+\end{equation}
+\end{tcolorbox}
 \section*{Part 4}
 By chain rule, because $\frac{d}{dt}u$ also needs to capture the information about $x(t)$'s changes over time:
 \begin{equation}
-\frac{d}{dt}u(x(t), t) = u_t(x(t), t) + u_x(x(t), t)\frac{dx}{dt}
+\begin{aligned}
+\frac{d}{dt}u(x(t), t) = u_t(x(t), t) + u_x(x(t), t)\frac{d}{dt}(x(t))\\
+= u_t(x(t), t) + u_x(x(t), t)\frac{dx}{dt}
+\end{aligned}
 \end{equation}
 
 \end{document}
