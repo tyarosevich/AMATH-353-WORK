@@ -134,5 +134,58 @@ u(x, t) = e^{-(x - 2t)^2}\\
 e^{-(3 - 2(4)^2} = e^{-25}
 \end{equation}
 \end{tcolorbox}
+Note the results of (8) and (10) are the same.
+\section*{Part 2}
+\subsection*{a.)}
+The characteristic curves and ODEs for this question are arrived at in the same manner as equations (1) - (4) above, albeit restricted to $x \geq 0$:
+\begin{tcolorbox}[minipage,colback=white,arc=0pt,outer arc=0pt]
+\begin{equation}
+\begin{aligned}
+\frac{dx}{dt} = 2\\
+x(t) = 2t + x_0\\
+\frac{du}{dt} = 0\\
+u(x(t), t) = A
+\end{aligned}
+\end{equation}
+\end{tcolorbox}
+Note that $x_0 = x - 2t$, and so with the restriction that $x > 2t$, we can assume that $x_0$ will be positive, and thus will be defined by the initial value $u(x, 0) = 0$. We can then use this to solve the constant in $u(x(t), t)$:
+\begin{equation}
+\begin{aligned}
+u(x(t), t) = A\\
+u(x(t), 0) = u_0(x_0) = A\\
+u_0(x_0) = 0\\
+A = 0
+\end{aligned}
+\end{equation}
+From this it follows that when $x > 2t$:
+\begin{tcolorbox}[minipage,colback=white,arc=0pt,outer arc=0pt]
+\begin{equation}
+u(x, t) = 0
+\end{equation}
+\end{tcolorbox}
+\subsection*{b.)}
+To solve for $u$ when $x < 2t$, I took the same approach, but integrated $\frac{dx}{dt}$ differently in order to get $t$ in terms of $x$ and some $t_0$:
+\begin{equation}
+\begin{aligned}
+\frac{dx}{dt} = 2\\
+dt = \frac{2}{dx}\\
+\int dt = \int \frac{2}{dx}\\
+t = \frac{1}{2}x + t_0
+\end{aligned}
+\end{equation}
+From this equation we can see that $t_0 = t - \frac{1}{2}x$ and so when $x < 2t$, the value of $t_0$ will be greater than $0$ and thus defined by the initial condition $u_0 = u(0,t) = \frac{t}{1+t^2}$. From this, we follow the same procedure as above to solve for $u$:
+\begin{equation}
+\begin{aligned}
+u(x(t), t) = A\\
+u(0, t) = u_0(t_0)\\
+u_0(t_0) = \frac{t_0}{1+t_0^2} = A
+\end{aligned}
+\end{equation}
+Then plugging in the value above for $t_0$ we arrive at the solution for the value of $u(x, t)$ when $x < 2t$:
+\begin{tcolorbox}[minipage,colback=white,arc=0pt,outer arc=0pt]
+\begin{equation}
+u(x, t) =  \frac{t - \frac{1}{2}x}{1+(t - \frac{1}{2}x)^2}
+\end{equation}
+\end{tcolorbox}
 bla
 \end{document}

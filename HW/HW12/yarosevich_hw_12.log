@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.5)  17 MAY 2018 17:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.5)  17 MAY 2018 18:26
 entering extended mode
 **./yarosevich_hw_12.tex
 (yarosevich_hw_12.tex
@@ -1247,18 +1247,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--113
 
  []
 
-[2 <./hw_12_plot1.pdf>]
+[2 <./hw_12_plot1.pdf>] [3]
 
 Package caption Warning: Unused \captionsetup[lstlisting] on input line 24.
 See the caption package documentation for explanation.
 
-[3] (yarosevich_hw_12.aux) ) 
+[4] (yarosevich_hw_12.aux) ) 
 Here is how much of TeX's memory you used:
- 31205 strings out of 493312
- 672122 string characters out of 3136295
- 707825 words of memory out of 3000000
- 34313 multiletter control sequences out of 15000+200000
- 540642 words of font info for 64 fonts, out of 3000000 for 9000
+ 31214 strings out of 493312
+ 672267 string characters out of 3136295
+ 710825 words of memory out of 3000000
+ 34322 multiletter control sequences out of 15000+200000
+ 540949 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,10n,101p,10429b,530s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
@@ -1273,9 +1273,9 @@ mr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5
 .pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb
 ><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
 C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on yarosevich_hw_12.pdf (3 pages, 162098 bytes).
+Output written on yarosevich_hw_12.pdf (4 pages, 167691 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
+ 123 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  162 words of extra memory for PDF output out of 10000 (max. 10000000)
 
