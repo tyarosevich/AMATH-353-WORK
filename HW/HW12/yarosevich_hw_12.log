@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.5)  17 MAY 2018 19:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.5)  18 MAY 2018 15:09
 entering extended mode
 **./yarosevich_hw_12.tex
 (yarosevich_hw_12.tex
@@ -1248,24 +1248,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--113
  []
 
 [2 <./hw_12_plot1.pdf>] [3]
-<hw_12_plot2.pdf, id=83, pagebox=cropbox, 473.77pt x 249.93375pt>
+<hw_12_plot2.pdf, id=83, pagebox=cropbox, 473.77pt x 236.885pt>
 File: hw_12_plot2.pdf Graphic file (type pdf)
 <use hw_12_plot2.pdf>
 Package pdftex.def Info: hw_12_plot2.pdf  used on input line 193. on input line
  193.
-Package pdftex.def Info: Requested size: 345.0pt x 182.00772pt on input line 19
+Package pdftex.def Info: Requested size: 345.0pt x 172.50531pt on input line 19
 3.
+ [4 <./hw_12_plot2.pdf>]
+<hw_12_plot3.pdf, id=107, pagebox=cropbox, 408.52625pt x 251.94125pt>
+File: hw_12_plot3.pdf Graphic file (type pdf)
+<use hw_12_plot3.pdf>
+Package pdftex.def Info: hw_12_plot3.pdf  used on input line 248. on input line
+ 248.
+Package pdftex.def Info: Requested size: 345.0pt x 212.7748pt on input line 248
+.
 
+Underfull \hbox (badness 10000) in paragraph at lines 243--250
+
+ []
+
+[5]
 
 Package caption Warning: Unused \captionsetup[lstlisting] on input line 24.
 See the caption package documentation for explanation.
 
-[4 <./hw_12_plot2.pdf>] (yarosevich_hw_12.aux) ) 
+[6 <./hw_12_plot3.pdf>] (yarosevich_hw_12.aux) ) 
 Here is how much of TeX's memory you used:
- 31219 strings out of 493312
- 672385 string characters out of 3136295
+ 31226 strings out of 493312
+ 672533 string characters out of 3136295
  710825 words of memory out of 3000000
- 34326 multiletter control sequences out of 15000+200000
+ 34332 multiletter control sequences out of 15000+200000
  540949 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,10n,101p,10429b,530s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1282,9 +1295,9 @@ lic/amsfonts/cm/cmr5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
 amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmsy7.pfb>
-Output written on yarosevich_hw_12.pdf (4 pages, 194011 bytes).
+Output written on yarosevich_hw_12.pdf (6 pages, 228985 bytes).
 PDF statistics:
- 144 PDF objects out of 1000 (max. 8388607)
+ 171 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 167 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 172 words of extra memory for PDF output out of 10000 (max. 10000000)
 

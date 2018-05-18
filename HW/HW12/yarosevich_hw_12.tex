@@ -187,10 +187,65 @@ Then plugging in the value above for $t_0$ we arrive at the solution for the val
 u(x, t) =  \frac{t - \frac{1}{2}x}{1+(t - \frac{1}{2}x)^2}
 \end{equation}
 \end{tcolorbox}
-Here are the profiles of the solution at $t = 0, 1, 2, 3$ (note that at $t=0$ the solution is of course 0 for all $x$).
+Here are the profiles of the solution at $t = 0, 1, 2, 3$.
 \begin{figure}[H]
   \centering
     \includegraphics[width=\textwidth]{hw_12_plot2.pdf}
+    \caption{$t = 0, 1, 2, 3$}
+\end{figure}
+\section*{Part 3}
+This problem yields the same characteristic lines as in Part 1, namely:
+\begin{equation}
+\begin{aligned}
+\frac{dx}{dt} = 2\\
+x = 2t + x_0
+\end{aligned}
+\end{equation}
+However, the second ODE is now:
+\begin{equation}
+\frac{du}{dt} = - u(x(t), t)
+\end{equation}
+This equation describes the rate of change of $u(x(t), t)$ along the characteristic lines, and is a function entirely of $t$, and it can be solved as follows:
+\begin{equation}
+\begin{aligned}
+\int \frac{du}{u} = \int -dt\\
+ln(u) = -t + C\\
+u(x(t), t) = e^{-t + C} = e^Ce^{-t} = Ae^{-t}
+\end{aligned}
+\end{equation}
+We now use the same method as above to solve for the constant $A$:
+\begin{equation}
+\begin{aligned}
+u(x, 0)= u(x(0), 0) = u_0(x_0) = e^{-x_0^2}\\
+u(x(t), 0) = Ae^0\\
+A = e^{-x_0^2}
+\end{aligned}
+\end{equation}
+So we see that along the characteristic lines we have some constant defined by the initial condition $x_0$, and that over the characteristic line this value is damped over time. While this could be simplified to a single exponent, I prefer to leave them separate so as to elucidate the damping term.
+\begin{equation}
+u(x(t), t) = e^{-t}e^{-x_0^2}
+\end{equation}
+Finally, we can plug in the value for $x_0$ in terms of $(x,t)$ and arrive at a general solution:
+\begin{tcolorbox}[minipage,colback=white,arc=0pt,outer arc=0pt]
+\begin{equation}
+u(x, t) = e^{-t}e^{-(x-2t)^2}
+\end{equation}
+\end{tcolorbox}
+To compare this with Part 1, let us calculate $(x,t)$:
+\begin{equation}
+u(3, 4) = e^{-4}e^{-(3-2(4))^2}= = e^{-4}e^{-25}
+\end{equation}
+\begin{tcolorbox}[minipage,colback=white,arc=0pt,outer arc=0pt]
+\begin{equation}
+u(3,4) = e^{-29}
+\end{equation}
+\end{tcolorbox}
+As expected, effect of the $-u$ term has been to dampen the solution over time relative to the solution in Part 1.\\
+\\
+The request that we draw the characteristic lines in the (t, x) plane seems a little odd to me, and perhaps it is a typo? The characteristic lines for this problem are identical to those in Part 1, and (Figure 1) above displays them. If, however, it is not a typo, we can re-orient the lines in Figure 1 by determining $t$ in terms of $x$ and $t_0$ as was done in equation (14) above, then plot them:
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=\textwidth]{hw_12_plot3.pdf}
     \caption{$t = 0, 1, 2, 3$}
 \end{figure}
 \end{document}
