@@ -1,5 +1,5 @@
 clc; clear all; close all;
-
+% Root finder for Part 1
 x_mesh = linspace(-1.8, 1.8, 100);
 x0_list = zeros(1, length(x_mesh));
 t = .6;
@@ -14,11 +14,28 @@ end
 
 u = exp(-x0_list.^2);
 %plot(x_mesh, u)
-%%
+%% Characteristic Lines for Part 1
 figure
 hold on
 for x0 = linspace(-2, 2, 50)
     t = (x_mesh - x0) .* exp(x0.^2);
+    plot(x_mesh,t, 'Color', 'b')
+
+    xlabel('x')
+    ylabel('t')
+end
+axis([-1.8 1.8 0 2])
+hold off
+
+%% Characteristic Lines for Part 2
+clc; clear all; close all;
+
+x_mesh = linspace(-1.8, 1.8, 100);
+
+figure
+hold on
+for x0 = linspace(-2, 2, 50)
+    t = (x_mesh - x0) .* (x0^4 + 2*x0^2 + 1);
     plot(x_mesh,t, 'Color', 'b')
 
     xlabel('x')
