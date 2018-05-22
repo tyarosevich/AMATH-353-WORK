@@ -35,7 +35,7 @@ x_mesh = linspace(-1.8, 1.8, 100);
 figure
 hold on
 for x0 = linspace(-2, 2, 50)
-    t = (x_mesh - x0) .* (x0^4 + 2*x0^2 + 1);
+    t = (x_mesh - x0) .* ((1 + x0^2)^2);
     plot(x_mesh,t, 'Color', 'b')
 
     xlabel('x')
