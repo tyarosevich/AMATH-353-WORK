@@ -59,6 +59,6 @@ set(gca, 'FontSize', [12], 'FontName', 'Times')
 set(gcf,'color','w');
 xlabel('x', 'FontSize', 15)
 ylabel('t', 'FontSize', 15)
-axis([-1.8 1.8 0 2])
+axis([1.1 1.15 .9 1])
 hold off
-export_fig hw_13_plot8.pdf
+export_fig hw_13_plot9.pdf

@@ -13,6 +13,7 @@
 \usepackage{titlesec}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{placeins}
 
 \newcommand{\R}{\mathbb{R}}
 
@@ -39,7 +40,7 @@
 %	DOCUMENT INFORMATION
 %----------------------------------------------------------------------------------------
 
-\title{AMATH 353: Homework 12 \\Due May, 18 2018 \\ ID: 1064712} % Title
+\title{AMATH 353: Homework 13 \\Due May, 23 2018 \\ ID: 1064712} % Title
 
 \author{Trent \textsc{Yarosevich}} % Author name
 
@@ -65,11 +66,11 @@ Instructor: Jeremy Upsal % Instructor/supervisor
 %	SECTION 1
 %----------------------------------------------------------------------------------------
 \section*{Part 1}
-\subsection*{a.)}
+\subsection*{(a)}
 Because the PDE in question is homogeneous, we have $x = c(u_o(x_0))t + x_0$. For this equation, $c(u(x,t)) = u(x, t)$. From this we get the following:
 \begin{equation}
 \begin{aligned}
-u(x,0) = u_0(x_0) = e^{-x^2}\\
+u(x,0) = u_0(x_0) = e^{-x_0^2}\\
 \frac{du}{dt} = 0\\
 u(x(t), t) = A = e^{-x_0^2}
 \end{aligned}
@@ -78,20 +79,22 @@ And the characteristic lines:
 \begin{tcolorbox}[minipage,colback=white,arc=0pt,outer arc=0pt]
 \begin{equation}
 \begin{aligned}
-x = x_0 + te^{-x^2}\\
-t = (x - x_0)e^{x^2}
+x = x_0 + te^{-x_0^2}\\
+t = (x - x_0)e^{x_0^2}
 \end{aligned}
 \end{equation}
 \end{tcolorbox}
-\subsection*{b.)}
-\begin{figure}[H]
+\subsection*{(b)}
+On the following page is a plot of the characteristics:
+\begin{figure}[!htbp]
   \centering
     \includegraphics[width=\textwidth]{hw_13_plot1.pdf}
-    \caption{$x_0 \in [-1.8, 1.8]$}
+    \caption{$x \in [-1.8, 1.8]$}
 \end{figure}
-\subsection*{c.)}
+\FloatBarrier
+\subsection*{(c)}
 I wrote a script in matlab to find the roots for $f(x_0) = x_0 - x + te^{-x^2}$, which is included in my HW submission.
-\subsection*{d.) and e.)}
+\subsection*{(d) and (e)}
 Below are the plots, using $x_0$ values from my rootfinder, for $t = 0, 0.6, 0.9, 1.18$ and $x \in [-1.8, 1.8]$ with a mesh of values. From the first figure, it is clear that at $t=0$ the rootfinder is returning the correct values, yielding the profile of $u_0(x_0) = e^{-x^2}$. As the figures below show, as $t$ increases, the top of the profile has a faster rate of change than the bottom, causeing a 'crashing wave' to form. This is to be expected, since the time velocity of the PDE is depending on both the spatial velocity and the value of $u$ itself, thus the larger $u$ values have larger time velocity.
 \begin{figure}[H]
   \centering
@@ -119,7 +122,7 @@ Below are the plots, using $x_0$ values from my rootfinder, for $t = 0, 0.6, 0.9
 
   \end{minipage}
 \end{figure}
-\subsection*{f.)}
+\subsection*{(f)}
 When my rootfinder is used to plot the values at $t=1.5$, it appears to get 'stuck' at the point of the wave crashing and falling over. This occurs at the point that the characteristics start to cross, which by closely examining (zooming in) on Figure 1, would seem to happen around $t = 1.2$. Below are two plots using my rootfinder, of $t = 1.5$ and $t = 2.5$. In both, we see an abrupt change in the value of $u$, caused by crossing characteristic lines which result in the value of $u$ 'jumping' between two $x_0$ values produced by my rootfinder. The plot at $t=2.5$ shows what the profile looks like as even more $x_0$ values fall inside the range where they begin to cross.
 
 \begin{figure}[H]
@@ -138,7 +141,7 @@ When my rootfinder is used to plot the values at $t=1.5$, it appears to get 'stu
     \hfill
 \end{figure}
 \section*{Part 2}
-\subsection*{a.)}
+\subsection*{(a)}
 Given the provided initial condition, and the fact that the PDE is homogeneous, we have the following:
 \begin{equation}
 \begin{aligned}
@@ -160,12 +163,25 @@ We then plug this into the formula $x = x_0 + tc(u(x,t))$ to arrive at the equat
 x = x_0 + \frac{t}{(1+x_0^2)^2}
 \end{equation}
 \end{tcolorbox}
-Here is a plot of these characteristic curves:
+Here is a plot of these characteristic curves generally, as well as a plot that scales up the area where the first characteristic lines appear to cross.
 \begin{figure}[H]
   \centering
+  \begin{minipage}[b]{0.49\textwidth}
     \includegraphics[width=\textwidth]{hw_13_plot8.pdf}
-    \caption{$x_0 \in [-2, 2]$}
+    \caption{$x \in [-1.8, 1.8]$}
+
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{hw_13_plot9.pdf}
+    \caption{$x \in [1.1, 1.15]$}
+
+  \end{minipage}
+    \hfill
 \end{figure}
+\begin{tcolorbox}[minipage,colback=white,arc=0pt,outer arc=0pt]
+Judging from the zoomed in figure, I would estimate $t_b \approx .97$.
+\end{tcolorbox}
 \subsection*{(c) - (d)}
 First, we need to take the implicit derivative of equation (5) above in order to find $\frac{dx_0}{dx}$, so that we can examine at what point in time it blows up to $\infty$:
 \begin{equation}
@@ -189,4 +205,27 @@ t = \frac{(1+x_0^2)^3}{4x_0}
 \end{aligned}
 \end{equation}
 We are interested in the lowest time $t$ at which this equation holds, so we will use this last equation to make a function of $x_0$, take the derivative of that function, and see at what $x_0$ it is equal to zero.
+\begin{equation}
+\begin{aligned}
+F(x_0) = \frac{(1+x_0^2)^3}{4x_0}\\
+F'(x_0) = 3(1+x_0^2)^2(2x_0)(4x_0)^{-1} + (1+x_0^2)^3(-\frac{1}{4})(x_0)^{-2}\\
+F'(x_0) = \frac{3}{2}(1+x_0^2)^2 - \frac{(1+x_0^2)^3}{4x_0^2} = 0\\
+6x_0^2(1+x_0^2)^2 = (1+x_0^2)^3\\
+6x_0^2 + 12x_0^4 +6x_0^6 = 1 + 3x_0^2 + 3x_0^4 +x_0^6\\
+3x_0^2 + 9x_0^4 + 5x_0^6 -1 = 0
+\end{aligned}
+\end{equation}
+Using Mathematica to find the roots of this polynomial, we get:
+\begin{equation}
+x_0 = i, i,-i, -i, \frac{1}{\sqrt{5}}, -\frac{1}{\sqrt{5}}
+\end{equation}
+Since we are only interested in real roots, we simply have the $\pm \frac{1}{\sqrt{5}}$. However, $-\frac{1}{\sqrt{5}}$ yields $t < 0$, so the only remaining $x_0$ value is $x_0 = \frac{1}{\sqrt{5}}$. Plugging this into equation describing $t$ as the denominator of $\frac{dx_0}{dx} \to 0$ we get the following breaking time, which is indeed quite close to the answer I got above in (a) from (Figure 9).
+\begin{tcolorbox}[minipage,colback=white,arc=0pt,outer arc=0pt]
+\begin{equation}
+\begin{aligned}
+t_b = \frac{(1+\frac{1}{\sqrt{5}}^2)^3}{\frac{4}{\sqrt{5}}}\\
+t_b = \frac{54}{25\sqrt{5}} \approx .965981
+\end{aligned}
+\end{equation}
+\end{tcolorbox}
 \end{document}
