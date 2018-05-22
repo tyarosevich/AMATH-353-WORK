@@ -55,5 +55,10 @@ for x0 = linspace(-2, 2, 50)
     xlabel('x')
     ylabel('t')
 end
+set(gca, 'FontSize', [12], 'FontName', 'Times')
+set(gcf,'color','w');
+xlabel('x', 'FontSize', 15)
+ylabel('t', 'FontSize', 15)
 axis([-1.8 1.8 0 2])
 hold off
+export_fig hw_13_plot8.pdf

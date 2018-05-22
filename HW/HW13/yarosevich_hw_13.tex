@@ -78,7 +78,7 @@ And the characteristic lines:
 \begin{tcolorbox}[minipage,colback=white,arc=0pt,outer arc=0pt]
 \begin{equation}
 \begin{aligned}
-x = x_0 + te^{-x^2}
+x = x_0 + te^{-x^2}\\
 t = (x - x_0)e^{x^2}
 \end{aligned}
 \end{equation}
@@ -138,5 +138,55 @@ When my rootfinder is used to plot the values at $t=1.5$, it appears to get 'stu
     \hfill
 \end{figure}
 \section*{Part 2}
-
+\subsection*{a.)}
+Given the provided initial condition, and the fact that the PDE is homogeneous, we have the following:
+\begin{equation}
+\begin{aligned}
+u(x(t), t) = u(x(0), 0) = u_0(x_0) = \frac{1}{1+x_0^2}\\
+\frac{du}{dt} = 0\\
+u(x(t), t) = A = \frac{1}{1+x_0^2}
+\end{aligned}
+\end{equation}
+And then for the characteristic lines:
+\begin{equation}
+\begin{aligned}
+c(u(x,t)) = u(x,t)^2\\
+u(x,t)^2 = u_0(x_0)^2 = \frac{1}{(1+x_0^2)^2}
+\end{aligned}
+\end{equation}
+We then plug this into the formula $x = x_0 + tc(u(x,t))$ to arrive at the equation for the characteristics:
+\begin{tcolorbox}[minipage,colback=white,arc=0pt,outer arc=0pt]
+\begin{equation}
+x = x_0 + \frac{t}{(1+x_0^2)^2}
+\end{equation}
+\end{tcolorbox}
+Here is a plot of these characteristic curves:
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=\textwidth]{hw_13_plot8.pdf}
+    \caption{$x_0 \in [-2, 2]$}
+\end{figure}
+\subsection*{(c) - (d)}
+First, we need to take the implicit derivative of equation (5) above in order to find $\frac{dx_0}{dx}$, so that we can examine at what point in time it blows up to $\infty$:
+\begin{equation}
+\begin{aligned}
+\frac{d}{dx}x = \frac{d}{dx} \Big[x_0 + \frac{t}{(1+x_0^2)^2}\Big]\\
+1 = \frac{dx_0}{dx} + t\frac{d}{dx}\Big[(1+x_0^2)^{-2}\Big]\\
+1 = \frac{dx_0}{dx} + t\Big[t(-2(1 + x_0^2)^{-3}(2x_0)(\frac{dx_0}{dx})\Big]\\
+1 = \frac{dx_0}{dx}\Big[\frac{-4tx_0}{(1+x_0^2)^3}\Big]
+\end{aligned}
+\end{equation}
+\begin{tcolorbox}[minipage,colback=white,arc=0pt,outer arc=0pt]
+\begin{equation}
+\frac{dx_0}{dx} = \frac{1}{\frac{-4tx_0}{(1+x_0^2)^3} + 1}
+\end{equation}
+\end{tcolorbox}
+Examining this equation, it is clear that it can only go to $\infty$ when the denominator approaches zero, and so we have:
+\begin{equation}
+\begin{aligned}
+\frac{-4tx_0}{(1+x_0^2)^3} + 1 = 0\\
+t = \frac{(1+x_0^2)^3}{4x_0}
+\end{aligned}
+\end{equation}
+We are interested in the lowest time $t$ at which this equation holds, so we will use this last equation to make a function of $x_0$, take the derivative of that function, and see at what $x_0$ it is equal to zero.
 \end{document}
