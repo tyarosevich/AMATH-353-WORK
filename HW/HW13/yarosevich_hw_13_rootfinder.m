@@ -2,7 +2,7 @@ clc; clear all; close all;
 % Root finder for Part 1
 x_mesh = linspace(-1.8, 1.8, 100);
 x0_list = zeros(1, length(x_mesh));
-t = 2.5;
+t = ;
 %fun1 = @(x0, x) (x - x0) .* exp(x0.^2);
 
 for i = 1:length(x_mesh)

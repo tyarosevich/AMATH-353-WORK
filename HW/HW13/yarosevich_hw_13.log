@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.5)  22 MAY 2018 16:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.5)  23 MAY 2018 16:04
 entering extended mode
 **./yarosevich_hw_13.tex
 (yarosevich_hw_13.tex
@@ -1284,37 +1284,43 @@ Package pdftex.def Info: hw_13_plot6.pdf  used on input line 131. on input line
  131.
 Package pdftex.def Info: Requested size: 169.0519pt x 137.26709pt on input line
  131.
-File: hw_13_plot6.pdf Graphic file (type pdf)
-<use hw_13_plot6.pdf>
-Package pdftex.def Info: hw_13_plot6.pdf  used on input line 137. on input line
+<hw_13_plot7.pdf, id=92, pagebox=cropbox, 368.37625pt x 299.1175pt>
+File: hw_13_plot7.pdf Graphic file (type pdf)
+<use hw_13_plot7.pdf>
+Package pdftex.def Info: hw_13_plot7.pdf  used on input line 137. on input line
  137.
 Package pdftex.def Info: Requested size: 169.0519pt x 137.26709pt on input line
  137.
-<hw_13_plot8.pdf, id=92, pagebox=cropbox, 367.3725pt x 299.1175pt>
+<hw_13_plot8.pdf, id=93, pagebox=cropbox, 367.3725pt x 299.1175pt>
 File: hw_13_plot8.pdf Graphic file (type pdf)
 <use hw_13_plot8.pdf>
 Package pdftex.def Info: hw_13_plot8.pdf  used on input line 170. on input line
  170.
 Package pdftex.def Info: Requested size: 169.0519pt x 137.64592pt on input line
  170.
-<hw_13_plot9.pdf, id=93, pagebox=cropbox, 382.42876pt x 299.1175pt>
+<hw_13_plot9.pdf, id=94, pagebox=cropbox, 382.42876pt x 299.1175pt>
 File: hw_13_plot9.pdf Graphic file (type pdf)
 <use hw_13_plot9.pdf>
 Package pdftex.def Info: hw_13_plot9.pdf  used on input line 176. on input line
  176.
 Package pdftex.def Info: Requested size: 169.0519pt x 132.2237pt on input line 
 176.
- [4 <./hw_13_plot6.pdf>] [5 <./hw_13_plot8.pdf> <./hw_13_plot9.pdf>]
+ [4 <./hw_13_plot6.pdf> <./hw_13_plot7.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 208--211
+
+ []
+
+[5 <./hw_13_plot8.pdf> <./hw_13_plot9.pdf>]
 
 Package caption Warning: Unused \captionsetup[lstlisting] on input line 25.
 See the caption package documentation for explanation.
 
 [6] (yarosevich_hw_13.aux) ) 
 Here is how much of TeX's memory you used:
- 31267 strings out of 493312
- 673539 string characters out of 3136295
- 711949 words of memory out of 3000000
- 34364 multiletter control sequences out of 15000+200000
+ 31273 strings out of 493312
+ 673672 string characters out of 3136295
+ 709949 words of memory out of 3000000
+ 34369 multiletter control sequences out of 15000+200000
  540949 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,12n,101p,10429b,600s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1330,9 +1336,9 @@ mr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5
 .pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb
 ><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
 C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on yarosevich_hw_13.pdf (6 pages, 192616 bytes).
+Output written on yarosevich_hw_13.pdf (6 pages, 197294 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
+ 162 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 197 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 202 words of extra memory for PDF output out of 10000 (max. 10000000)
 

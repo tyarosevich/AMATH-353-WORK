@@ -1,0 +1,27 @@
+clc; clear all; close all;
+
+x_mesh = linspace(-2*pi, 2*pi, 100);
+% x_mesh_R = x_mesh_R(2:end);
+% x_mesh_L = linspace(-2*pi, 1,100);
+figure
+hold on
+for x0 = linspace(-2*pi, 2*pi, 100)
+    if x0 < 1
+        t = x_mesh - x0;
+    else
+        t = (2*(x_mesh - x0))/ sqrt(2);
+    end
+    plot(x_mesh, t, 'Color', 'b')
+
+end
+t_s = ((x_mesh -1) * pi) / (sqrt(2));
+plot(x_mesh, t_s, 'r')
+
+xlabel('x')
+ylabel('t')
+set(gca, 'FontSize', [12], 'FontName', 'Times')
+set(gcf,'color','w');
+xlabel('x', 'FontSize', 15)
+ylabel('t', 'FontSize', 15)
+axis([-pi pi 0 4])
+hold off
