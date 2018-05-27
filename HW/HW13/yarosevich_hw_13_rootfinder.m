@@ -2,7 +2,7 @@ clc; clear all; close all;
 % Root finder for Part 1
 x_mesh = linspace(-1.8, 1.8, 100);
 x0_list = zeros(1, length(x_mesh));
-t = ;
+t = 0 ;
 %fun1 = @(x0, x) (x - x0) .* exp(x0.^2);
 
 for i = 1:length(x_mesh)
@@ -22,7 +22,7 @@ ylabel('u(x,2)', 'FontSize', 15)
 axis([-1.8 1.8 0 1])
 
 hold off
-export_fig hw_13_plot7.pdf
+%export_fig hw_13_plot7.pdf
 %% Characteristic Lines for Part 1
 figure
 hold on
