@@ -5,7 +5,7 @@ x_mesh = linspace(-2*pi, 2*pi, 1000);
 % x_mesh_L = linspace(-2*pi, 1,100);
 figure
 hold on
-for x0 = linspace(-2*pi, 2*pi, 100)
+for x0 = linspace(-2*pi, 2*pi, 200)
     if x0 < 1
         t = x_mesh - x0;
     elseif x0 > 1
@@ -15,7 +15,7 @@ for x0 = linspace(-2*pi, 2*pi, 100)
 
 end
 t_s = ((x_mesh - 1) * pi) / (2 * sqrt(2));
-plot(x_mesh, t_s, 'r')
+plot(x_mesh, t_s, 'r', 'LineWidth', 2)
 
 xlabel('x')
 ylabel('t')
@@ -23,7 +23,9 @@ set(gca, 'FontSize', [12], 'FontName', 'Times')
 set(gcf,'color','w');
 xlabel('x', 'FontSize', 15)
 ylabel('t', 'FontSize', 15)
-axis([0 4 0 4])
+axis([.5 3 0 2])
+export_fig hw_14_plot1.pdf
+
 %%
 clc; clear all; close all;
 
@@ -51,6 +53,18 @@ set(gcf,'color','w');
 xlabel('x', 'FontSize', 15)
 ylabel('t', 'FontSize', 15)
 axis([0 4 0 4])
+export_fig hw_14_plot2.pdf
+
+%% Part 2 initial condition
+clc; clear all; close all;
+x = linspace(-1, 2, 100);
+x1 = x(x <= 0);
+x3 = x(x >= 1);
+x2 = x(x > 0 & x <1);
+u = [ones(1, length(x1)) (1-x2) zeros(1, length(x3))];
+plot(x, u)
+axis([-1 1.5 -.2 1.5])
+
 %% Part 2 Characteristic Lines
 clc; clear all; close all;
 
