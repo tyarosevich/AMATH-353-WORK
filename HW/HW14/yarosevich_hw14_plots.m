@@ -37,8 +37,8 @@ for x0 = linspace(-2*pi, 2*pi, 100)
         t = x_mesh - x0;
     elseif x0 < 1
         t = (2/sqrt(2)) * (x_mesh - x0);
-    plot(x_mesh, t, 'Color', 'b')
     end
+    plot(x_mesh, t, 'Color', 'b')
 
 end
 % t_s = ((x_mesh - 1) * pi) / (2 * sqrt(2));
@@ -122,18 +122,23 @@ end
 %% Part 3 Characteristics
 clc; close all; clear all;
 
-x_mesh = linspace(-2*pi, 2*pi, 1000);
-% x_mesh_R = x_mesh_R(2:end);
-% x_mesh_L = linspace(-2*pi, 1,100);
+x = linspace(-100, 100, 1000);
+u1 = 10;
+v1 = 5;
+u_p = 2 * u1/3; 
+u_m = u1/6;
+slope1 = 1 / (v1 * (1 - (2 * u_m)/u1))
+slope2 = 1 / (v1 * (1 - (2 * u_p)/u1))
 figure
 hold on
-for x0 = linspace(-2*pi, 2*pi, 100)
-    if x0 > 1
-        t = x_mesh - x0;
-    elseif x0 < 1
-        t = (2/sqrt(2)) * (x_mesh - x0);
-    plot(x_mesh, t, 'Color', 'b')
+for x0 = linspace(-10, 10,  100)
+    if x0 < 0
+        t = (x - x0) / (v1 * (1 - (2*u_m)/u1));
+    elseif x0 >= 0
+        t = (x - x0) / (v1 * (1 - (2*u_p)/u1));
+    plot(x, t, 'Color', 'b')
     end
+    plot(x, t, 'Color', 'b')
 
 end
 % t_s = ((x_mesh - 1) * pi) / (2 * sqrt(2));
@@ -145,4 +150,4 @@ set(gca, 'FontSize', [12], 'FontName', 'Times')
 set(gcf,'color','w');
 xlabel('x', 'FontSize', 15)
 ylabel('t', 'FontSize', 15)
-axis([0 4 0 4])
+axis([-3 3 0 4])
