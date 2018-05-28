@@ -83,6 +83,66 @@ set(gcf,'color','w');
 xlabel('x', 'FontSize', 15)
 ylabel('t', 'FontSize', 15)
 axis([-1 2 0 2])
+%% Part 2 time plots
+x = linspace(-1, 2, 100);
+figure
+for t = 0:.25:2;
+    u = zeros(1, length(x));
+    if t < 1
+        for i = 1:length(x)
+            if x(i) <= t
+                u(i) = 1;
+            elseif (t < x(i)) && (x(i) < 1)
+                u(i) = 1 - (x(i) - t) / (1 - t);
+            else
+                u(i) = 0;
+            end
+        end
+        plot(x, u)
+        axis([-1 2 -.5 2])
+        pause(1)
+    elseif t >= 1
+        for i = 1:length(x)
+            if x(i) < .5 * t + .5
+                u(i) = 1;
+            elseif x(i) > .5 * t + .5
+                u(i) = 0;
+            end
+        end
+        plot(x, u)
+        axis([-1 2 -.5 2])
+        pause(1)
+    end
+end
+
+
+
+
+
 %% Part 3 Characteristics
 clc; close all; clear all;
 
+x_mesh = linspace(-2*pi, 2*pi, 1000);
+% x_mesh_R = x_mesh_R(2:end);
+% x_mesh_L = linspace(-2*pi, 1,100);
+figure
+hold on
+for x0 = linspace(-2*pi, 2*pi, 100)
+    if x0 > 1
+        t = x_mesh - x0;
+    elseif x0 < 1
+        t = (2/sqrt(2)) * (x_mesh - x0);
+    plot(x_mesh, t, 'Color', 'b')
+    end
+
+end
+% t_s = ((x_mesh - 1) * pi) / (2 * sqrt(2));
+% plot(x_mesh, t_s, 'r')
+
+xlabel('x')
+ylabel('t')
+set(gca, 'FontSize', [12], 'FontName', 'Times')
+set(gcf,'color','w');
+xlabel('x', 'FontSize', 15)
+ylabel('t', 'FontSize', 15)
+axis([0 4 0 4])
