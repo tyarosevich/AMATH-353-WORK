@@ -64,6 +64,14 @@ x2 = x(x > 0 & x <1);
 u = [ones(1, length(x1)) (1-x2) zeros(1, length(x3))];
 plot(x, u)
 axis([-1 1.5 -.2 1.5])
+xlabel('x')
+ylabel('u')
+set(gca, 'FontSize', [12], 'FontName', 'Times')
+set(gcf,'color','w');
+xlabel('x', 'FontSize', 15)
+ylabel('u', 'FontSize', 15)
+export_fig hw_14_plot3.pdf
+
 
 %% Part 2 Characteristic Lines
 clc; clear all; close all;

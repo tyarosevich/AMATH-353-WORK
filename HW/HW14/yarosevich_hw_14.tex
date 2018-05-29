@@ -185,5 +185,41 @@ If we change the characteristics in this way,the density increases at the discon
 \FloatBarrier
 \section*{Part 2}
 \subsection*{(a)}
-
+\begin{figure}[!htbp]
+  \centering
+    \includegraphics[width=\textwidth]{hw_14_plot3.pdf}
+    \caption{$u(x, 0)$}
+\end{figure}
+\FloatBarrier
+\subsection*{(b)}
+First, we obtain the solution to $u$ along the characteristics:
+\begin{equation}
+\begin{aligned}
+\frac{du}{dt} = 0\\
+u(x(t), t) = A\\
+A = u(x,0) = u_0(x_0)\\
+\end{aligned}
+\end{equation}
+\begin{equation}
+u(x(t),t) =
+  \begin{cases}
+			1, \; \; \; x_0 \leq 0 \\
+			1-x_0, \; \; \; 0 < x_0 < 1\\
+			0, \; \; \; x_0 \geq 1\\
+            \end{cases}
+\
+\end{equation}
+Using the values for $u_0(x_0)$ and $x(t) = x_0 + c(u_0(x_0))t$, we then obtain the characteristic curves:
+\begin{tcolorbox}[minipage,colback=white,arc=0pt,outer arc=0pt]
+\begin{equation}
+x(t) =
+  \begin{cases}
+			x_0 + t, \; \; \; x_0 \leq 0 \\
+			x_0 + t(1-x_0), \; \; \; 0 < x_0 < 1\\
+			x_0, \; \; \; x_0 \geq 1\\
+            \end{cases}
+\
+\end{equation}
+\end{tcolorbox}
+d
 \end{document}
