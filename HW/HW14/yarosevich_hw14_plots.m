@@ -64,11 +64,11 @@ x2 = x(x > 0 & x <1);
 u = [ones(1, length(x1)) (1-x2) zeros(1, length(x3))];
 plot(x, u)
 axis([-1 1.5 -.2 1.5])
-xlabel('x')
+xlabel('$x_0$')
 ylabel('u')
 set(gca, 'FontSize', [12], 'FontName', 'Times')
 set(gcf,'color','w');
-xlabel('x', 'FontSize', 15)
+xlabel('x_0', 'FontSize', 15)
 ylabel('u', 'FontSize', 15)
 export_fig hw_14_plot3.pdf
 
@@ -105,10 +105,14 @@ set(gcf,'color','w');
 xlabel('x', 'FontSize', 15)
 ylabel('t', 'FontSize', 15)
 axis([-1 2 0 2])
+export_fig hw_14_plot4.pdf
+
 %% Part 2 time plots
 x = linspace(-1, 2, 100);
+c = 4;
 figure
 for t = 0:.25:2;
+    c = c + 1;
     u = zeros(1, length(x));
     if t < 1
         for i = 1:length(x)
@@ -121,7 +125,13 @@ for t = 0:.25:2;
             end
         end
         plot(x, u)
+        set(gca, 'FontSize', [12], 'FontName', 'Times')
+        set(gcf,'color','w');
+        xlabel('x', 'FontSize', 15)
+        ylabel('u', 'FontSize', 15)
         axis([-1 2 -.5 2])
+        export_fig(sprintf('hw_14_plot%d', c),'-pdf');
+
         pause(1)
     elseif t >= 1
         for i = 1:length(x)
@@ -133,6 +143,11 @@ for t = 0:.25:2;
         end
         plot(x, u)
         axis([-1 2 -.5 2])
+        set(gca, 'FontSize', [12], 'FontName', 'Times')
+        set(gcf,'color','w');
+        xlabel('x', 'FontSize', 15)
+        ylabel('u', 'FontSize', 15)
+        export_fig(sprintf('hw_14_plot%d', c), '-pdf');
         pause(1)
     end
 end
@@ -147,8 +162,8 @@ clc; close all; clear all;
 x = linspace(-100, 100, 1000);
 u1 = 10;
 v1 = 5;
-u_p = 2 * u1/3; 
-u_m = u1/6;
+u_p = u1/6; 
+u_m = 2*u1/3;
 slope1 = 1 / (v1 * (1 - (2 * u_m)/u1))
 slope2 = 1 / (v1 * (1 - (2 * u_p)/u1))
 figure
@@ -173,3 +188,4 @@ set(gcf,'color','w');
 xlabel('x', 'FontSize', 15)
 ylabel('t', 'FontSize', 15)
 axis([-3 3 0 4])
+export_fig hw_14_plot16.pdf

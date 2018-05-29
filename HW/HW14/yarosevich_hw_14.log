@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.5)  28 MAY 2018 16:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.5)  28 MAY 2018 22:26
 entering extended mode
 **./yarosevich_hw_14.tex
 (yarosevich_hw_14.tex
@@ -1254,41 +1254,137 @@ Package pdftex.def Info: hw_14_plot2.pdf  used on input line 182. on input line
  182.
 Package pdftex.def Info: Requested size: 345.0pt x 279.37677pt on input line 18
 2.
-<hw_14_plot3.pdf, id=68, pagebox=cropbox, 375.4025pt x 296.10625pt>
+<hw_14_plot3.pdf, id=68, pagebox=cropbox, 375.4025pt x 297.11pt>
 File: hw_14_plot3.pdf Graphic file (type pdf)
 <use hw_14_plot3.pdf>
 Package pdftex.def Info: hw_14_plot3.pdf  used on input line 190. on input line
  190.
-Package pdftex.def Info: Requested size: 345.0pt x 272.14091pt on input line 19
+Package pdftex.def Info: Requested size: 345.0pt x 273.06343pt on input line 19
 0.
- [4 <./hw_14_plot2.pdf>] [5 <./hw_14_plot3.pdf>]
+ [4 <./hw_14_plot2.pdf>] [5 <./hw_14_plot3.pdf>] [6] [7]
+<hw_14_plot5.pdf, id=92, pagebox=cropbox, 371.3875pt x 299.1175pt>
+File: hw_14_plot5.pdf Graphic file (type pdf)
+<use hw_14_plot5.pdf>
+Package pdftex.def Info: hw_14_plot5.pdf  used on input line 331. on input line
+ 331.
+Package pdftex.def Info: Requested size: 169.0519pt x 136.158pt on input line 3
+31.
+<hw_14_plot6.pdf, id=93, pagebox=cropbox, 371.3875pt x 299.1175pt>
+File: hw_14_plot6.pdf Graphic file (type pdf)
+<use hw_14_plot6.pdf>
+Package pdftex.def Info: hw_14_plot6.pdf  used on input line 337. on input line
+ 337.
+Package pdftex.def Info: Requested size: 169.0519pt x 136.158pt on input line 3
+37.
+<hw_14_plot7.pdf, id=94, pagebox=cropbox, 371.3875pt x 299.1175pt>
+File: hw_14_plot7.pdf Graphic file (type pdf)
+<use hw_14_plot7.pdf>
+Package pdftex.def Info: hw_14_plot7.pdf  used on input line 343. on input line
+ 343.
+Package pdftex.def Info: Requested size: 169.0519pt x 136.158pt on input line 3
+43.
+<hw_14_plot8.pdf, id=95, pagebox=cropbox, 371.3875pt x 299.1175pt>
+File: hw_14_plot8.pdf Graphic file (type pdf)
+<use hw_14_plot8.pdf>
+Package pdftex.def Info: hw_14_plot8.pdf  used on input line 349. on input line
+ 349.
+Package pdftex.def Info: Requested size: 169.0519pt x 136.158pt on input line 3
+49.
+<hw_14_plot9.pdf, id=96, pagebox=cropbox, 371.3875pt x 299.1175pt>
+File: hw_14_plot9.pdf Graphic file (type pdf)
+<use hw_14_plot9.pdf>
+Package pdftex.def Info: hw_14_plot9.pdf  used on input line 355. on input line
+ 355.
+Package pdftex.def Info: Requested size: 169.0519pt x 136.158pt on input line 3
+55.
+<hw_14_plot10.pdf, id=97, pagebox=cropbox, 371.3875pt x 299.1175pt>
+File: hw_14_plot10.pdf Graphic file (type pdf)
+<use hw_14_plot10.pdf>
+Package pdftex.def Info: hw_14_plot10.pdf  used on input line 361. on input lin
+e 361.
+Package pdftex.def Info: Requested size: 169.0519pt x 136.158pt on input line 3
+61.
+<hw_14_plot11.pdf, id=98, pagebox=cropbox, 371.3875pt x 299.1175pt>
+File: hw_14_plot11.pdf Graphic file (type pdf)
+<use hw_14_plot11.pdf>
+Package pdftex.def Info: hw_14_plot11.pdf  used on input line 367. on input lin
+e 367.
+Package pdftex.def Info: Requested size: 169.0519pt x 136.158pt on input line 3
+67.
+<hw_14_plot12.pdf, id=99, pagebox=cropbox, 371.3875pt x 299.1175pt>
+File: hw_14_plot12.pdf Graphic file (type pdf)
+<use hw_14_plot12.pdf>
+Package pdftex.def Info: hw_14_plot12.pdf  used on input line 373. on input lin
+e 373.
+Package pdftex.def Info: Requested size: 169.0519pt x 136.158pt on input line 3
+73.
+<hw_14_plot13.pdf, id=100, pagebox=cropbox, 371.3875pt x 299.1175pt>
+File: hw_14_plot13.pdf Graphic file (type pdf)
+<use hw_14_plot13.pdf>
+Package pdftex.def Info: hw_14_plot13.pdf  used on input line 380. on input lin
+e 380.
+Package pdftex.def Info: Requested size: 169.0519pt x 136.158pt on input line 3
+80.
+ [8]
+Overfull \vbox (85.63202pt too high) has occurred while \output is active []
+
+
+[9 <./hw_14_plot5.pdf> <./hw_14_plot6.pdf> <./hw_14_plot7.pdf> <./hw_14_plot8.p
+df> <./hw_14_plot9.pdf> <./hw_14_plot10.pdf> <./hw_14_plot11.pdf> <./hw_14_plot
+12.pdf>]
+<hw_14_plot14.pdf, id=148, pagebox=cropbox, 368.37625pt x 299.1175pt>
+File: hw_14_plot14.pdf Graphic file (type pdf)
+<use hw_14_plot14.pdf>
+Package pdftex.def Info: hw_14_plot14.pdf  used on input line 388. on input lin
+e 388.
+Package pdftex.def Info: Requested size: 169.0519pt x 137.26709pt on input line
+ 388.
+<hw_14_plot15.pdf, id=149, pagebox=cropbox, 368.37625pt x 299.1175pt>
+File: hw_14_plot15.pdf Graphic file (type pdf)
+<use hw_14_plot15.pdf>
+Package pdftex.def Info: hw_14_plot15.pdf  used on input line 395. on input lin
+e 395.
+Package pdftex.def Info: Requested size: 169.0519pt x 137.26709pt on input line
+ 395.
+ [10 <./hw_14_plot13.pdf> <./hw_14_plot14.pdf>]
+<hw_14_plot16.pdf, id=164, pagebox=cropbox, 368.37625pt x 299.1175pt>
+File: hw_14_plot16.pdf Graphic file (type pdf)
+<use hw_14_plot16.pdf>
+Package pdftex.def Info: hw_14_plot16.pdf  used on input line 404. on input lin
+e 404.
+Package pdftex.def Info: Requested size: 169.0519pt x 137.26709pt on input line
+ 404.
+ [11 <./hw_14_plot15.pdf> <./hw_14_plot16.pdf>]
 
 Package caption Warning: Unused \captionsetup[lstlisting] on input line 25.
 See the caption package documentation for explanation.
 
-[6] (yarosevich_hw_14.aux) ) 
+[12] (yarosevich_hw_14.aux) ) 
 Here is how much of TeX's memory you used:
- 31238 strings out of 493312
- 672890 string characters out of 3136295
- 709949 words of memory out of 3000000
- 34340 multiletter control sequences out of 15000+200000
+ 31302 strings out of 493312
+ 674400 string characters out of 3136295
+ 712949 words of memory out of 3000000
+ 34392 multiletter control sequences out of 15000+200000
  540949 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,11n,101p,10429b,538s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7
-.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on yarosevich_hw_14.pdf (6 pages, 223004 bytes).
+ 63i,13n,101p,10429b,602s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmmi5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
+17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.p
+fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on yarosevich_hw_14.pdf (12 pages, 319116 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
+ 226 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 172 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 232 words of extra memory for PDF output out of 10000 (max. 10000000)
 
