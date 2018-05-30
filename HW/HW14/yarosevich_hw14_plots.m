@@ -162,8 +162,8 @@ clc; close all; clear all;
 x = linspace(-100, 100, 1000);
 u1 = 10;
 v1 = 5;
-u_p = u1/6; 
-u_m = 2*u1/3;
+u_p = 2*u1/3; 
+u_m = u1/6;
 slope1 = 1 / (v1 * (1 - (2 * u_m)/u1))
 slope2 = 1 / (v1 * (1 - (2 * u_p)/u1))
 figure
@@ -187,5 +187,5 @@ set(gca, 'FontSize', [12], 'FontName', 'Times')
 set(gcf,'color','w');
 xlabel('x', 'FontSize', 15)
 ylabel('t', 'FontSize', 15)
-axis([-3 3 0 4])
-export_fig hw_14_plot16.pdf
+axis([-2 2 0 2])
+%export_fig hw_14_plot16.pdf

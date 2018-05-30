@@ -131,7 +131,16 @@ Because $u(x(t), t) = u_0(x_0)$ we can find the breaking time by finding where i
 \begin{equation}
 u_x = u_0'(x_0)\frac{dx_0}{dx}\\
 \end{equation}
-It is clear from the initial condition given above that we cannot take the derivative $u_0'(x_0)$ because $u_0(x_0)$ has a discontinuity when $x_0 = 1$. Plugging this into equation (7) above at $t=0$ we see that this occurs at $x = 1$.
+It is clear from the initial condition given above that we cannot take the derivative $u_0'(x_0)$ because $u_0(x_0)$ has a discontinuity when $x_0 = 1$. Plugging this into equation (7) above at $t=0$ we see that this occurs at $x = 1$. Last, we need to confirm that when this discontinuity occurs, that the characteristic lines are actually crossing. Plugging in the value for $x_0$ we have:
+\begin{equation}
+t = 
+  \begin{cases}
+			x - 1, \; \; \; x_0 < 1 \\
+			\sqrt{2}(x - 1) \; \; \; x_0 \geq 1 \\
+            \end{cases}
+\
+\end{equation}
+The slope of the characteristic line for $x_0 < 1$ is 1, and the slope for $x_0 \geq 1$ is $\sqrt(2)$. Both lines pass through $x = 1, t = 0$, so the lines will indeed cross at $t=0$. In the class we seem comfortable saying this, but technically, don't the characteristics cross at an infinitely small $t > 0$? 
 \subsection*{(c)}
 Since $\phi(x,t) = \sin(u)u_x$ we can integrate to get the following (note that I am ignoring the constant of integration, since it drops out in the Rankine-Hugoniot relation anyway):
 \begin{equation}
@@ -384,16 +393,37 @@ Making use equations (22), (24), and (25) above:
 \end{figure}
 \section*{Part 3}
 \subsection*{(a)}
-For these values, there is no change in density of cars at any point, thus no shock/traffic jam forms. Information travels forward at a uniform speed of $v = v_1(1 - \frac{\frac{u_1}{3}}{u_1}) = \frac{2}{3}v_1$. NOTE THIS IS WRONG IT'S JUST THE RELATION
+For these values, there is no change in density of cars at any point, thus no shock/traffic jam forms. Traffic travels forward at a uniform speed of $v = v_1(1 - \frac{\frac{u_1}{3}}{u_1}) = \frac{2}{3}v_1$. 
 \begin{figure}[!htbp]
   \centering
     \includegraphics[width=.49\textwidth]{hw_14_plot14.pdf}
     \caption{}
 \end{figure}
 \subsection*{(b)}
-%shwo the slope of the shock line in order to demonstrate that the information is moving forward.
 
-For these values a traffic jam forms immediately at $t=0$. If you zoom in on the graph, it's clear that information is traveling forward, which is also clear since the $u^+$ value is less than $u_1$. Overall this means traffic hits the traffic jam and then immediately slows to a much lower speed. 
+For these values a traffic jam forms immediately at $t=0$. If you zoom in on the graph, it's clear that information is traveling forward, which is also clear since the $u^+$ value is less than $u_1$. Overall this means traffic hits the traffic jam and then immediately slows to a much lower speed. Information is moving forward i.e. traffic is moving slowly forward, at the following rate:
+\begin{equation}
+\begin{aligned}
+\phi = v_1(u - \frac{u^2}{u_1})\\
+\phi^+ = v_1(\frac{2u_1}{3} - \frac{(\frac{2u_1}{3})^2}{u_1}\\
+\phi^+ = v_1(\frac{2u_1}{3} - \frac{4u_1}{9}) = \frac{2}{9}v_1u_1\\
+\phi^- = v_1(\frac{u_1}{6} - \frac{(\frac{u_1}{6})^2}{u_1}\\
+\phi^- = v_1(\frac{u_1}{6} - \frac{u_1}{36}) = \frac{5}{36}v_1u_1\\
+\end{aligned}
+\end{equation}
+Then using this to calculate the slope of the shock line we have:
+\begin{equation}
+\begin{aligned}
+\frac{dx_s}{dt} = \frac{\frac{2u_1v_1}{9} - \frac{5u_1v_1}{36}}{\frac{2u_1}{3} - \frac{u1}{6}}\\
+\frac{dx_s}{dt} = 2\frac{1}{u_1}( \frac{2u_1v_1}{9} - \frac{5u_1v_1}{36})\\
+\frac{dx_s}{dt} = \frac{4}{9}v_1 - \frac{10}{36}v_1\\
+\end{aligned}
+\end{equation}
+\begin{tcolorbox}[minipage,colback=white,arc=0pt,outer arc=0pt]
+\begin{equation}
+\frac{dx_s}{dt} = \frac{v_1}{6}
+\end{equation}
+\end{tcolorbox}
 \begin{figure}[!htbp]
   \centering
     \includegraphics[width=.49\textwidth]{hw_14_plot15.pdf}
@@ -402,7 +432,7 @@ For these values a traffic jam forms immediately at $t=0$. If you zoom in on the
 \FloatBarrier
 
 \subsection*{(c)}
-For these values, traffic is moving more slowly on the left and more quickly on the right, and thus a region forms in which there are no characteristics, and thus no solution to $u$. Intuitively, this would seem to model an area in which there are no cars because two 'packs' of cars are getting further and further apart. As to why this would happen, I can think of a few scenarios, but some, like a change in speed limit, mess with our model. Perhaps an area in which a single lane opens up to two lanes, but this wouldn't explain the widening region in which $u$ is undefined.
+For these values, traffic is moving more slowly on the left and more quickly on the right, and thus a region forms in which there are no characteristics, and thus no solution to $u$. Intuitively, this would seem to model an area in which there are no cars because two 'packs' of cars are getting further and further apart. As to why this would happen, I'm not sure. I suppose it could model an expanding work crew is diverting traffic to a side street.
 \begin{figure}[!htbp]
   \centering
     \includegraphics[width=.49\textwidth]{hw_14_plot16.pdf}
@@ -418,7 +448,7 @@ The slope of the characteristics in the traffic problem are give by
 \end{equation}
 We can see that when the slope of the characteristics in the left region are greater than the ones in the right, they will cross (regardless of whether the slopes are positive or negative). We then have:
 \begin{equation}
-\frac{1}{v_1(1-\frac{2u^-}{u_1})} \geq \frac{1}{v_1(1-\frac{2u^+}{u_1})}
+\frac{1}{v_1(1-\frac{2u^-}{u_1})} > \frac{1}{v_1(1-\frac{2u^+}{u_1})}
 \end{equation}
-This then very quickly simplifies down to $u^- \geq u^+$, which is to say if the initial density is higher on the left than it is on the right, no shock will form.
+This then very quickly simplifies down to $u^+ \geq u^-$, which is to say if the initial density is higher in the right region than it is on the left region, a shock will form. This also correctly deals with the scenario in which the density on the left is higher than the right, in which the characteristics are going away from each other. In that situation, the characteristics in the left region have lower slope (opposite sign) than those in the right. 
 \end{document}
