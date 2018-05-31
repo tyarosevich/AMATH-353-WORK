@@ -87,7 +87,7 @@ We can then make use of $x(t) = x_0 + c(u_0(x_0)t$: and determine the equations 
 \begin{equation}
 \begin{aligned}
 c(u(x(t), t)) = \sin(u)\\
-c(u_0(x_0) = \sin(u_0(x_0))\\
+c(u_0(x_0)) = \sin(u_0(x_0))\\
 \end{aligned}
 \end{equation}
 \begin{equation}
@@ -98,7 +98,8 @@ c(u_0(x_0)
             \end{cases}
 \
 \end{equation}
-This in turn gives the following characteristics curves:
+This in turn gives the following characteristics curves, and the solution along them:
+\begin{tcolorbox}[minipage,colback=white,arc=0pt,outer arc=0pt]
 \begin{equation}
 x(t) = 
   \begin{cases}
@@ -106,7 +107,15 @@ x(t) =
 			x_0 + \frac{\sqrt{2}}{2}t, \; \; \; x_0 \geq 1 \\
             \end{cases}
 \
+u(x(t), t)= 
+  \begin{cases}
+			\frac{\pi}{2}, \; \; \; x_0 < 1 \\
+			\frac{\pi}{4}, \; \; \; x_0 \geq 1 \\
+            \end{cases}
+\
 \end{equation}
+\end{tcolorbox}~
+Additionally, here are the characteristics in different arrangements, which will be useful.
 \begin{equation}
 t = 
   \begin{cases}
@@ -115,7 +124,6 @@ t =
             \end{cases}
 \
 \end{equation}
-Additionally, here are the functions of $x_0$ in terms of $x$ and $t$, which will be useful later:
 \begin{equation}
 x_0 =
   \begin{cases}
@@ -131,7 +139,7 @@ Because $u(x(t), t) = u_0(x_0)$ we can find the breaking time by finding where i
 \begin{equation}
 u_x = u_0'(x_0)\frac{dx_0}{dx}\\
 \end{equation}
-It is clear from the initial condition given above that we cannot take the derivative $u_0'(x_0)$ because $u_0(x_0)$ has a discontinuity when $x_0 = 1$. Plugging this into equation (7) above at $t=0$ we see that this occurs at $x = 1$. Last, we need to confirm that when this discontinuity occurs, that the characteristic lines are actually crossing. Plugging in the value for $x_0$ we have:
+It is clear from the initial condition given above that $u_x$ blows up when we try to take the derivative $u_0'(x_0)$ because $u_0(x_0)$ has a discontinuity when $x_0 = 1$. Plugging this into equation (7) above at $t=0$ we see that this occurs at $x = 1$. Last, we need to confirm that when this discontinuity occurs, that the characteristic lines are actually crossing. Plugging in the value for $x_0$ we have:
 \begin{equation}
 t = 
   \begin{cases}
@@ -140,7 +148,12 @@ t =
             \end{cases}
 \
 \end{equation}
-The slope of the characteristic line for $x_0 < 1$ is 1, and the slope for $x_0 \geq 1$ is $\sqrt(2)$. Both lines pass through $x = 1, t = 0$, so the lines will indeed cross at $t=0$. In the class we seem comfortable saying this, but technically, don't the characteristics cross at an infinitely small $t > 0$? 
+The slope of the characteristic line for $x_0 < 1$ is 1, and the slope for $x_0 \geq 1$ is $\sqrt(2)$. Both lines pass through $x = 1, t = 0$, so the lines will indeed cross at $t=0$. In the class we seem comfortable saying this, but technically, don't the characteristics cross at an infinitely small $t > 0$? In any case:
+\begin{tcolorbox}[minipage,colback=white,arc=0pt,outer arc=0pt]
+\begin{equation}
+t_b = 0, \text{ at } x =1
+\end{equation}
+\end{tcolorbox}
 \subsection*{(c)}
 Since $\phi(x,t) = \sin(u)u_x$ we can integrate to get the following (note that I am ignoring the constant of integration, since it drops out in the Rankine-Hugoniot relation anyway):
 \begin{equation}
@@ -233,7 +246,11 @@ x(t) =
 \end{equation}
 \end{tcolorbox}
 \subsection*{(c)}
-We know from Knobel's that a solution for $u(x,t)$ when a shock forms must have continuous first derivatives in the regions to the left and right of the shock line. When we take the derivative $u'_0(x_0)$ from equaton (15) we have the following:
+We know from Knobel's and class that the breaking time is defined as the minimum of the equation:
+\begin{equation}
+t_b = \frac{-1}{c'(u_0(x_0))u'_0(x_0)}
+\end{equation}
+In this case, since $c(u_0(x_0)) = u_0(x_0)$ we know that $c'(u_0(x_0)) = 1$. This leaves $u'_0(x_0)$ which can easily be found from equations (15) and (16) above by taking the derivative in respect to $x_0$, which gives:
 \begin{equation}
 u'_0(x_0) =
   \begin{cases}
@@ -243,17 +260,23 @@ u'_0(x_0) =
             \end{cases}
 \
 \end{equation}
-This derivative is discontinuous at $x_0 = 0, 1$ and so no two regions exist such that there would be continuous derivatives on each side. However, we can deduce a few things looking at the speed of the initial profile, which is equal to $u$. The value of $u$ when $x_0 <0$ is 1, so it is moving to the right, and the value when $x \geq 1$ is 0, so it is not moving in time. The middle region's value from $0<x<1$ is $1-x_0$ so the top of the profile is moving faster than the bottom, so over time it will form a vertical line as $x_0$ approaches 1. This means that if these characteristic lines at $x_0 = 0, 1$ intersect, there will be smooth first derivatives on each side, and furthermore there will be an jump in the solutions, and thus a shockwave. Plugging these values of $x_0$ into equation (16) we get:
+Plugging this into equation (18), it is clear that we can only minimize the equation using the middle region, which is constant, and results in $t_b = 1$, with an $x_0$ value that we can choose arbitrarily within the range of the minimized function. Because this middle region is defined from $0 < x_0 < 1$ we could choose an $x_0$ infinitely close to 0. We can then plug $t=1$ and $x_0 = 0$ into the correct domain of equation (17) to get $x = 0 + 1(1-0)$ (recall that this $x_0$ is actually defined in the $0 < x_0 <1$ region). Thus the breaking time occurs at:
 \begin{tcolorbox}[minipage,colback=white,arc=0pt,outer arc=0pt]
 \begin{equation}
-\begin{aligned}
-x_0 = 0 = x -t\\
-x_0 = 1 = x\\
-0 = 1 - t\\
-t_b = 1
-\end{aligned}
+t_b = 1, x = 1
 \end{equation}
-\end{tcolorbox}
+\end{tcolorbox}~
+\\
+\\
+Alternatively, we can rigorously find the breaking time looking at the characteristics. The characteristics in the region $x \geq 1$ are just vertical lines at $x_0$, so the left-most one is a vertical line at $x = 1$. The characteristics in the domain $x_0 \leq 1$ have a slope of 1 and the right-most one is defined at $x_0 = 0$, thus it is a line with slope one that passes through the origin. This obviously crosses the $x_0 \geq 1$ line at $x = 1$. But what about the middle region?\\
+\\
+The middle region has a slope of $\frac{1}{1-x_0}$ and so because of the region of $x_0$ in which it's defined, we can see that the left-most line with the lowest slope, infinitely close to $x_0 = 0$, will not cross the last characteristic in the left region (it will basically be the same line going to the same $x_0$). The rightmost one does not cross the line at $x_0=0$ for the same reason, but oviously cross the last characteristic from the left region at $x=0$. But what about the middle region characteristics crossing each other, or the rest of the characteristics crossing with the right or left region?\\
+\\
+The middle region in terms of x is defined by $t = \frac{x - x_0}{1-x_0}$. Suppose we arbitrarily pick any two lines (or any three, or even an infinite number) of lines in this region, defined by two different $x_0$ values, say $x_1$ and $x_2$. Let's assume they cross, since geometrically, it would appear they all cross at the same place:
+\begin{equation}
+\frac{x-x_2}{1-x_2} = \frac{x-x_1}{1-x_1}
+\end{equation}
+Since this is sort of an aside, I won't show all the algebra, but it's pretty simple and quickly reduces to x = 1. This means that all the lines in this middle region cross at at this x value. Furthermore, they all cross at this x value at $t=1$, since we then have $t = \frac{1 - x_0}{1 - x_0}$. And since they are lines, none of them crosses $x_0 = 1$ before this point, meaning none of them crosses the characteristics of the right region, or the last characteristic of the left region, until they all cross each other at $x = 1, t = 1$. Sorry if this geometric version is redundant, but I got to thinking about it and figured I'd include it.
 \subsection*{(d)}
 Using equation (16) above, we can solve for $x_0$ for each of the 3 ranges. $x_0 \leq 0$ and $x_0 \geq 0$ are fairly straightforward, so I won't show my work for those. For $0 < x_0 < 1$ however, we have the following:
 \begin{equation}
@@ -314,9 +337,13 @@ With this information we can then use the Rankine-Hugoniot relation:
 \frac{dx_0}{dt} = \frac{1}{2}\\
 x_s(t) = \frac{1}{2}t + C\\
 x_s(1) = 1  = \frac{1}{2}(1) + C\\
-x_s(t) = \frac{1}{2}t + \frac{1}{2}
 \end{aligned}
 \end{equation}
+\begin{tcolorbox}[minipage,colback=white,arc=0pt,outer arc=0pt]
+\begin{equation}
+x_s(t) = \frac{1}{2}t + \frac{1}{2}
+\end{equation}
+\end{tcolorbox}
 \subsection*{(f)}
 Making use equations (22), (24), and (25) above:
 \begin{equation}
