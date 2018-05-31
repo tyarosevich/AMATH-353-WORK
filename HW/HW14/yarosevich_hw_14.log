@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.5)  30 MAY 2018 17:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2017.12.5)  30 MAY 2018 23:31
 entering extended mode
 **./yarosevich_hw_14.tex
 (yarosevich_hw_14.tex
@@ -1347,7 +1347,7 @@ Overfull \vbox (85.63202pt too high) has occurred while \output is active []
 [10 <./hw_14_plot5.pdf> <./hw_14_plot6.pdf> <./hw_14_plot7.pdf> <./hw_14_plot8.
 pdf> <./hw_14_plot9.pdf> <./hw_14_plot10.pdf> <./hw_14_plot11.pdf> <./hw_14_plo
 t12.pdf>]
-<hw_14_plot14.pdf, id=151, pagebox=cropbox, 368.37625pt x 299.1175pt>
+<hw_14_plot14.pdf, id=152, pagebox=cropbox, 368.37625pt x 299.1175pt>
 File: hw_14_plot14.pdf Graphic file (type pdf)
 <use hw_14_plot14.pdf>
 Package pdftex.def Info: hw_14_plot14.pdf  used on input line 426. on input lin
@@ -1355,14 +1355,14 @@ e 426.
 Package pdftex.def Info: Requested size: 169.0519pt x 137.26709pt on input line
  426.
  [11 <./hw_14_plot13.pdf> <./hw_14_plot14.pdf>]
-<hw_14_plot15.pdf, id=166, pagebox=cropbox, 368.37625pt x 299.1175pt>
+<hw_14_plot15.pdf, id=167, pagebox=cropbox, 368.37625pt x 299.1175pt>
 File: hw_14_plot15.pdf Graphic file (type pdf)
 <use hw_14_plot15.pdf>
 Package pdftex.def Info: hw_14_plot15.pdf  used on input line 456. on input lin
 e 456.
 Package pdftex.def Info: Requested size: 169.0519pt x 137.26709pt on input line
  456.
-<hw_14_plot16.pdf, id=167, pagebox=cropbox, 368.37625pt x 299.1175pt>
+<hw_14_plot16.pdf, id=168, pagebox=cropbox, 368.37625pt x 299.1175pt>
 File: hw_14_plot16.pdf Graphic file (type pdf)
 <use hw_14_plot16.pdf>
 Package pdftex.def Info: hw_14_plot16.pdf  used on input line 465. on input lin
@@ -1376,31 +1376,33 @@ See the caption package documentation for explanation.
 
 [13 <./hw_14_plot16.pdf>] (yarosevich_hw_14.aux) ) 
 Here is how much of TeX's memory you used:
- 31307 strings out of 493312
- 674479 string characters out of 3136295
+ 31311 strings out of 493312
+ 674521 string characters out of 3136295
  712949 words of memory out of 3000000
- 34397 multiletter control sequences out of 15000+200000
- 540949 words of font info for 65 fonts, out of 3000000 for 9000
+ 34399 multiletter control sequences out of 15000+200000
+ 541603 words of font info for 67 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,13n,101p,10429b,602s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,13n,101p,10429b,600s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmr5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmsy5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmsy7.pfb>
-Output written on yarosevich_hw_14.pdf (13 pages, 327731 bytes).
+X 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmr5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmsy5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmt
+i10.pfb>
+Output written on yarosevich_hw_14.pdf (13 pages, 347694 bytes).
 PDF statistics:
- 230 PDF objects out of 1000 (max. 8388607)
+ 238 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  232 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -327,7 +327,7 @@ Considering equation (22) above, we can see that at the breaking time $t_b = 1$,
 \begin{equation}
 \begin{aligned}
 u^- = 1, \; x < t\\
-u^+ = 0, \; x \geq 1
+u^+ = 0, \; x > 1
 \end{aligned}
 \end{equation}
 With this information we can then use the Rankine-Hugoniot relation:
@@ -362,7 +362,7 @@ Making use equations (22), (24), and (25) above:
     &t\geq 1
   \end{cases}
 \end{equation}
-\subsection*{(g)}
+\textbf{(g)}
 \begin{figure}[H]
   \centering
   \begin{minipage}[b]{0.49\textwidth}
@@ -420,7 +420,7 @@ Making use equations (22), (24), and (25) above:
 \end{figure}
 \section*{Part 3}
 \subsection*{(a)}
-For these values, there is no change in density of cars at any point, thus no shock/traffic jam forms. Traffic travels forward at a uniform speed of $v = v_1(1 - \frac{\frac{u_1}{3}}{u_1}) = \frac{2}{3}v_1$. 
+For these values, there is no change in density of cars at any point, thus no shock/traffic jam forms. Traffic travels forward at a uniform speed of $v = v_1(1 - \frac{\frac{u_1}{3}}{u_1}) = \frac{2}{3}v_1$. This is the best scenario for the flow of traffic. 
 \begin{figure}[!htbp]
   \centering
     \includegraphics[width=.49\textwidth]{hw_14_plot14.pdf}
@@ -428,7 +428,7 @@ For these values, there is no change in density of cars at any point, thus no sh
 \end{figure}
 \subsection*{(b)}
 
-For these values a traffic jam forms immediately at $t=0$. If you zoom in on the graph, it's clear that information is traveling forward, which is also clear since the $u^+$ value is less than $u_1$. Overall this means traffic hits the traffic jam and then immediately slows to a much lower speed. Information is moving forward i.e. traffic is moving slowly forward, at the following rate:
+For these values a traffic jam forms immediately at $t=0$. If you zoom in on the graph, it seems like the information (i.e. the traffic jam) is traveling forward, which makes sense since the $u^+$ value is less than $u_1$. Overall this means traffic hits the traffic jam and then immediately slows to a much lower speed. This is not a good scenario for traffic flow. Information is moving forward i.e. traffic is moving slowly forward, at the following rate:
 \begin{equation}
 \begin{aligned}
 \phi = v_1(u - \frac{u^2}{u_1})\\
@@ -459,7 +459,7 @@ Then using this to calculate the slope of the shock line we have:
 \FloatBarrier
 
 \subsection*{(c)}
-For these values, traffic is moving more slowly on the left and more quickly on the right, and thus a region forms in which there are no characteristics, and thus no solution to $u$. Intuitively, this would seem to model an area in which there are no cars because two 'packs' of cars are getting further and further apart. As to why this would happen, I'm not sure. I suppose it could model an expanding work crew is diverting traffic to a side street.
+For these values, traffic is moving more slowly on the left and more quickly on the right, and thus a region forms in which there are no characteristics, and thus no solution to $u$. Intuitively, this would seem to model an area in which there are no cars, but not in any useful way since the area is growing moving \textit{backwards} as well as forwards. As to why this would happen, I'm not sure. I suppose it could model an expanding work crew diverting traffic to a side street.
 \begin{figure}[!htbp]
   \centering
     \includegraphics[width=.49\textwidth]{hw_14_plot16.pdf}
@@ -477,5 +477,5 @@ We can see that when the slope of the characteristics in the left region are gre
 \begin{equation}
 \frac{1}{v_1(1-\frac{2u^-}{u_1})} > \frac{1}{v_1(1-\frac{2u^+}{u_1})}
 \end{equation}
-This then very quickly simplifies down to $u^+ \geq u^-$, which is to say if the initial density is higher in the right region than it is on the left region, a shock will form. This also correctly deals with the scenario in which the density on the left is higher than the right, in which the characteristics are going away from each other. In that situation, the characteristics in the left region have lower slope (opposite sign) than those in the right. 
+This then very quickly simplifies down to $u^+ \geq u^-$, which is to say if the initial density is higher in the right region than it is on the left region, a shock will form. This also correctly deals with the scenario in which the density on the left is higher than the right, in which the characteristics are going away from each other. In that situation, the characteristics in the left region have lower slope than those in the right, up to and including opposite sign. While implied above, we should note explicitly that when the slopes are equal, no shock will form. 
 \end{document}
