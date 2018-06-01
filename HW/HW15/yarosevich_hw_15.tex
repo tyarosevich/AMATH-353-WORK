@@ -1,0 +1,155 @@
+\documentclass{article}
+
+\usepackage{siunitx} % Provides the \SI{}{} and \si{} command for typesetting SI units
+\usepackage{graphicx} % Required for the inclusion of images
+\usepackage{amsmath} % Required for some math elements 
+\usepackage[export]{adjustbox} % loads also graphicx
+\usepackage{listings}
+\usepackage{matlab-prettifier}
+\usepackage{float}
+\usepackage[most]{tcolorbox}
+\usepackage{amsfonts}
+\usepackage{color}
+\usepackage{titlesec}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{placeins}
+\makeatletter
+\renewcommand{\env@cases}[1][@{}l@{\quad}l@{}]{%
+  \let\@ifnextchar\new@ifnextchar
+  \left\lbrace
+  \def\arraystretch{1.2}%
+  \array{#1}%
+}
+\makeatother
+
+\newcommand{\R}{\mathbb{R}}
+
+\usepackage{xcolor}
+
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{%
+  \parbox{\textwidth}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}\vskip-4pt}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\lstset{frame=lrb,xleftmargin=\fboxsep,xrightmargin=-\fboxsep}
+\titleformat{\section}[runin]
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}[runin]
+  {\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+
+%\usepackage{times} % Uncomment to use the Times New Roman font
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{AMATH 353: Homework 15 \\Due June, 1 2018 \\ ID: 1064712} % Title
+
+\author{Trent \textsc{Yarosevich}} % Author name
+
+\date{\today} % Date for the report
+
+\begin{document}
+\maketitle % Insert the title, author and date
+\setlength\parindent{1cm}
+
+\begin{center}
+\begin{tabular}{l r}
+%Date Performed: December 1, 2017 \\ % Date the experiment was performed
+Instructor: Jeremy Upsal % Instructor/supervisor
+\end{tabular}
+\end{center}
+
+% If you wish to include an abstract, uncomment the lines below
+% \begin{abstract}
+% Abstract text
+% \end{abstract}
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+\section*{Part 1}
+First, let's find the solutions a long the characteristic lines using the method of characteristics.
+\begin{equation}
+\begin{aligned}
+\frac{du}{dt} = 0\\
+u(x(t), t) = A\\
+u_0(x_0) = A\\
+u_0(x_0) = 
+  \begin{cases}
+			u_1, \; \; \; x_0 \leq 0 \\
+			0  ,  \; \; \; x_0 > 0 \\
+            \end{cases}
+\
+\end{aligned}
+\end{equation}
+The characteristic lines are then given as follows:
+\begin{equation}
+\begin{aligned}
+c(u) = v_1(1 - 2 \frac{2u}{u_1})\\
+c(u_0(x_0)) = 
+	\begin{cases}
+		v_1(1 - 2 \frac{2u_1}{u_1}) = -v_1, \; \; \; x_0 \leq 0 \\
+		v_1(1 - 2 \frac{0}{u_1}) = v_1, \; \; \; x_0 > 0 \\
+		\end{cases}
+\\
+x(t) = 
+	\begin{cases}
+		x_0 -v_1t, \; \; \; x_0 \leq 0 \\
+		x_0 + v_1t, \; \; \; x_0 > 0 \\
+		\end{cases}
+\
+\end{aligned}
+\end{equation}
+From this we get the following values for $x_0$:
+\begin{equation}
+x_0 = 
+	\begin{cases}
+		x + v_1t \; \; \; x_0 \leq 0 \\
+		x -v_1t, \; \; \; x_0 > 0 \\
+		\end{cases}
+\
+\end{equation}
+We can then plug these into the result of (1) above to get the solution to $u$ along the characteristic lines only:
+\begin{equation}
+u(x,t) = 
+  \begin{cases}
+			u_1, \; \; \; x \leq -v_1t \\
+			0  ,  \; \; \; x > v_1t \\
+            \end{cases}
+\
+\end{equation}
+This leaves the rarefaction wave. We know that, taking from the notes and Knobel, the solution along the rarefaction wave will be of the form $u(x,t) = g(\frac{x}{t})$, with the rarefaction lines taking the form $x = ct$. Plugging this into the traffic problem PDE simplifies to
+\begin{equation}
+\frac{1}{t}g'(x/t)\Big(g(x/t) - \frac{x}{t} \Big) = 0
+\end{equation}
+We know that $g$ is not constant (otherwise we'd still have a discontinuity), so we can examine $g(x/t) - \frac{x}{t} = 0$. This means that $g(x/t) = \frac{x}{t}$. Making use of this, and the fact that from our PDE we know $c = v_1(1-\frac{2u}{u_1})$, we can solve for $u$ in the following manner:
+\begin{equation}
+\begin{aligned}
+c = \frac{x}{t}\\
+g(x/t) = g(c) = c = v_1(1-\frac{2u}{u_1})\\
+v_1(1-\frac{2u}{u_1}) = \frac{x}{t}\\
+v_1 - \frac{2uv_1}{u_1} = \frac{x}{t}\\
+\frac{2uv_1}{u_1} = -\frac{x}{t} + v_1\\
+2uv_1 = u_1(v_1 - \frac{x}{t}\\
+u = \frac{u_1}{2}(1 - \frac{x}{v_1t})
+\end{aligned}
+\end{equation}
+We can then insert this solution into the region that the characteristics in (2) leave undefined, and substitute the $x_0$ values into the piecewise solution to get the final answer:
+\begin{tcolorbox}[minipage,colback=white,arc=0pt,outer arc=0pt]
+\begin{equation}
+u(x,t) = 
+  \begin{cases}[@{}l@{\quad}r@{}l@{}]
+			u_1, & &x \leq -v_1t  \\
+			 \frac{u_1	}{2}(1 - \frac{x}{v_1t}), & -v_1t < {} & x < v_1t\\
+			0  , & &x > v_1t \\
+            \end{cases}
+\
+\end{equation}
+\end{tcolorbox}
+\end{document}

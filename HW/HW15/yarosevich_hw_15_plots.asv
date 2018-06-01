@@ -31,17 +31,15 @@ axis([-2 2 0 2])
 clc; clear all; close all;
 x = linspace(-2, 2, 100);
 c = 1;
-u1 = 1;
-v1 = 1;
 figure
-for t = 0:.25:1.5;
-    c = c + 1;
+for t = 0:.25:2;
+    %c = c + 1;
     u = zeros(1, length(x));
     for i = 1:length(x)
         if x(i) <= -v1*t
             u(i) = u1;
-        elseif (-v1*t < x(i)) && (x(i) < v1*t)
-            u(i) = .5 * u1 * (1 - (1/v1) * (x(i)/t));
+        elseif (-v1*t < x(i)) && (x(i) < v)
+            u(i) = 1 - (x(i) - t) / (1 - t);
         else
             u(i) = 0;
         end
@@ -51,8 +49,8 @@ for t = 0:.25:1.5;
     set(gcf,'color','w');
     xlabel('x', 'FontSize', 15)
     ylabel('u', 'FontSize', 15)
-    axis([-2 2 -.1 1.1])
-    export_fig(sprintf('hw_15_plot%d', c),'-pdf');
+    axis([-1 2 -.5 2])
+    %export_fig(sprintf('hw_14_plot%d', c),'-pdf');
 
     pause(1)
     
